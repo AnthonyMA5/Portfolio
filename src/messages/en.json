@@ -1,0 +1,15 @@
+{
+  "HomePage": {
+    "title": "Hello jotos"
+  },
+  "Navigator": {
+    "homeTitle": "Home",
+    "aboutTitle": "About",
+    "projectsTitle": "Projects",
+    "contactTitle": "Contact"
+  },
+    "Language": {
+        "spanish": "Spanish",
+        "english": "English"
+    }
+}
