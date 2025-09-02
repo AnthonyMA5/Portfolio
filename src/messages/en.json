@@ -1,4 +1,5 @@
 {
+  "title": "Portfolio",
   "HomePage": {
     "title": "Hello jotos"
   },
@@ -8,8 +9,12 @@
     "projectsTitle": "Projects",
     "contactTitle": "Contact"
   },
-    "Language": {
-        "spanish": "Spanish",
-        "english": "English"
-    }
+  "Language": {
+    "spanish": "Spanish",
+    "english": "English"
+  },
+  "Theme": {
+    "light": "Light",
+    "dark": "Dark"
+  }
 }

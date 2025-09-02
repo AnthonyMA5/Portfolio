@@ -1,25 +1,43 @@
 @import "tailwindcss";
 
-@theme {
-    --color-primary-light-50: #ffffff;
-    --color-primary-light-100: #ffffff;
-    --color-primary-light-200: #ffffff;
-    --color-primary-light-300: #ffffff;
-    --color-primary-light-400: #ffffff;
-    --color-primary-light-500: #f1f1f1;
-    --color-primary-light-600: #d6d6d6;
-    --color-primary-light-700: #bababa;
-    --color-primary-light-800: #9f9f9f;
-    --color-primary-light-900: #848484;
+@custom-variant dark (&:where(.dark, .dark *));
 
-    --color-primary-dark-50: #6f7682;
-    --color-primary-dark-100: #585f6b;
-    --color-primary-dark-200: #414954;
-    --color-primary-dark-300: #2a323d;
-    --color-primary-dark-400: #131b26;
-    --color-primary-dark-500: #070e17;
-    --color-primary-dark-600: #050b11;
-    --color-primary-dark-700: #04070c;
-    --color-primary-dark-800: #020406;
-    --color-primary-dark-900: #000000;
+@theme {
+  --darkMode: class;
+  --color-primary-light-50: #ffffff;
+  --color-primary-light-100: #ffffff;
+  --color-primary-light-200: #ffffff;
+  --color-primary-light-300: #ffffff;
+  --color-primary-light-400: #ffffff;
+  --color-primary-light-500: #f1f1f1;
+  --color-primary-light-600: #d6d6d6;
+  --color-primary-light-700: #bababa;
+  --color-primary-light-800: #9f9f9f;
+  --color-primary-light-900: #848484;
+
+  --color-secondary-light-50: #cedaff;
+  --color-secondary-light-100: #a9c0ff;
+  --color-secondary-light-200: #84a6ff;
+  --color-secondary-light-300: #5f8bff;
+  --color-secondary-light-400: #3a71ff;
+  --color-secondary-light-500: #245af1;
+  --color-secondary-light-600: #1b45d5;
+  --color-secondary-light-700: #1230b9;
+  --color-secondary-light-800: #091b9c;
+  --color-secondary-light-900: #000780;
+
+  --color-primary-dark-50: #6f7682;
+  --color-primary-dark-100: #585f6b;
+  --color-primary-dark-200: #414954;
+  --color-primary-dark-300: #2a323d;
+  --color-primary-dark-400: #131b26;
+  --color-primary-dark-500: #070e17;
+  --color-primary-dark-600: #050b11;
+  --color-primary-dark-700: #04070c;
+  --color-primary-dark-800: #020406;
+  --color-primary-dark-900: #000000;
+}
+
+.color-transition {
+  @apply transition duration-500 ease-in-out;
 }

@@ -1,6 +1,7 @@
 {
+  "title": "Portafolio",
   "HomePage": {
-    "title": "Hola jotos"
+    "title": "Portafolio"
   },
   "Navigator": {
     "homeTitle": "Inicio",
@@ -11,5 +12,9 @@
   "Language": {
     "spanish": "Español",
     "english": "Inglés"
+  },
+  "Theme": {
+    "light": "Claro",
+    "dark": "Oscuro"
   }
 }
