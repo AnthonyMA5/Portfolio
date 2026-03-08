@@ -1,43 +1,140 @@
 @import "tailwindcss";
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --darkMode: class;
-  --color-primary-light-50: #ffffff;
-  --color-primary-light-100: #ffffff;
-  --color-primary-light-200: #ffffff;
-  --color-primary-light-300: #ffffff;
-  --color-primary-light-400: #ffffff;
-  --color-primary-light-500: #f1f1f1;
-  --color-primary-light-600: #d6d6d6;
-  --color-primary-light-700: #bababa;
-  --color-primary-light-800: #9f9f9f;
-  --color-primary-light-900: #848484;
+  --color-light-50: #ffffff;
+  --color-light-100: #f2f4f7;
+  --color-light-200: #e8ecf2;
+  --color-light-300: #d6d6d6;
+  --color-light-400: #8a909e;
+  --color-light-500: #3a3f4a;
+  --color-light-600: #0d0f12;
 
-  --color-secondary-light-50: #cedaff;
-  --color-secondary-light-100: #a9c0ff;
-  --color-secondary-light-200: #84a6ff;
-  --color-secondary-light-300: #5f8bff;
-  --color-secondary-light-400: #3a71ff;
-  --color-secondary-light-500: #245af1;
-  --color-secondary-light-600: #1b45d5;
-  --color-secondary-light-700: #1230b9;
-  --color-secondary-light-800: #091b9c;
-  --color-secondary-light-900: #000780;
+  --color-dark-50: #a8afbe;
+  --color-dark-100: #5a6070;
+  --color-dark-200: #1c2030;
+  --color-dark-300: #141720;
+  --color-dark-400: #0c0e13;
 
-  --color-primary-dark-50: #6f7682;
-  --color-primary-dark-100: #585f6b;
-  --color-primary-dark-200: #414954;
-  --color-primary-dark-300: #2a323d;
-  --color-primary-dark-400: #131b26;
-  --color-primary-dark-500: #070e17;
-  --color-primary-dark-600: #050b11;
-  --color-primary-dark-700: #04070c;
-  --color-primary-dark-800: #020406;
-  --color-primary-dark-900: #000000;
+  --color-brand-100: #cedaff;
+  --color-brand-200: #a9c0ff;
+  --color-brand-300: #84a6ff;
+  --color-brand-400: #5b8bf5;
+  --color-brand-500: #3b6fe8;
+  --color-brand-600: #245af1;
+  --color-brand-700: #1b45d5;
+  --color-brand-800: #1230b9;
+  --color-brand-900: #091b9c;
+
+  --color-status-available: #22c55e;
 }
 
-.color-transition {
-  @apply transition duration-500 ease-in-out;
+@layer components {
+  /* ── Backgrounds ── */
+  .bg-app {
+    @apply bg-light-100 dark:bg-dark-400;
+  }
+  .bg-surface {
+    @apply bg-light-50 dark:bg-dark-300;
+  }
+  .bg-surface2 {
+    @apply bg-light-200 dark:bg-dark-200;
+  }
+  .bg-nav {
+    @apply bg-light-100 dark:bg-dark-400;
+  }
+
+  /* ── Text ── */
+  .text-heading {
+    @apply text-light-600 dark:text-light-100 text-8xl font-bold;
+  }
+  .text-subheading {
+    @apply text-light-500 dark:text-light-100 text-2xl font-medium;
+  }
+  .text-body {
+    @apply text-light-500 dark:text-dark-50;
+  }
+  .text-caption {
+    @apply text-light-400 dark:text-dark-100;
+  }
+  .text-muted {
+    @apply text-light-400 dark:text-dark-100;
+  }
+  .text-accent {
+    @apply text-brand-500 dark:text-brand-400;
+  }
+
+  /* ── Borders ── */
+  .border-base {
+    @apply border-b border-light-300 dark:border-dark-200;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply bg-brand-500 dark:bg-brand-400 text-light-50
+           rounded-full px-6 py-2.5 font-medium text-sm
+           hover:opacity-90 transition-opacity duration-200;
+  }
+  .btn-secondary {
+    @apply bg-light-200 dark:bg-dark-200 text-light-600
+           dark:text-dark-50 rounded-full px-6 py-2.5
+           font-medium text-sm border border-light-300
+           dark:border-dark-200 hover:bg-light-300
+           dark:hover:bg-dark-300 transition-colors duration-200;
+  }
+  .btn-ghost {
+    @apply text-brand-500 dark:text-brand-400 font-medium
+           text-sm hover:underline transition-all duration-200;
+  }
+
+  /* ── Components ── */
+  .badge {
+    @apply bg-light-50 dark:bg-dark-200
+           text-dark-100 dark:text-light-300
+           py-2 px-6 rounded-full text-sm
+           font-medium flex items-center gap-2;
+  }
+  .chip {
+    @apply bg-light-200 dark:bg-dark-200
+           text-light-400 dark:text-dark-100
+           py-1 px-3 rounded-full text-xs font-medium;
+  }
+  .card {
+    @apply bg-light-50 dark:bg-dark-300
+           border border-light-300 dark:border-dark-200
+           rounded-2xl shadow-sm p-6;
+  }
+  .divider {
+    @apply border-t border-light-300 dark:border-dark-200;
+  }
+  .status-dot {
+    @apply relative flex h-1.5 w-1.5;
+  }
+  .status-dot-ping {
+    @apply animate-ping absolute inline-flex
+         h-full w-full rounded-full
+         bg-status-available opacity-75;
+  }
+  .status-dot-core {
+    @apply relative inline-flex rounded-full
+         h-1.5 w-1.5 bg-status-available
+         shadow-[0_0_6px_#22C55E];
+  }
+
+  /* ── Layout ── */
+  .section {
+    @apply w-full py-20 px-6
+         bg-light-100 dark:bg-dark-400
+         transition-colors duration-500 ease-in-out;
+  }
+  .section2 {
+    @apply w-full py-20 px-6
+         bg-light-200 dark:bg-dark-200
+         transition-colors duration-500 ease-in-out;
+  }
+
+  /* ── Utilities ── */
+  .color-transition {
+    @apply transition-colors duration-500 ease-in-out;
+  }
 }
