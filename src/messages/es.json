@@ -3,6 +3,14 @@
   "HomePage": {
     "title": "Portafolio"
   },
+  "Hero": {
+    "status": "Disponible para nuevas oportunidades",
+    "name": "Anthony",
+    "lastName": "Martinez",
+    "description": "Ingeniero en Desarrollo y Gestión de Software en plataformas móviles, web y de escritorio con enfoque en el área UX/UI.",
+    "projectsButton": "Ver proyectos",
+    "contactButton": "Contáctame"
+  },
   "Navigator": {
     "homeTitle": "Inicio",
     "aboutTitle": "Acerca de",

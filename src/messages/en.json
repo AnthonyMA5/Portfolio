@@ -3,6 +3,14 @@
   "HomePage": {
     "title": "My portfolio"
   },
+  "Hero": {
+    "status": "Available for new opportunities",
+    "name": "Anthony",
+    "lastName": "Martinez",
+    "description": "Software Development and Management Engineer in mobile, web and desktop platforms with a focus on the UX/UI area.",
+    "projectsButton": "View projects",
+    "contactButton": "Contact me"
+  },
   "Navigator": {
     "homeTitle": "Home",
     "aboutTitle": "About",
