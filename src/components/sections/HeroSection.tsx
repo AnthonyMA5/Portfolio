@@ -5,7 +5,7 @@ export default async function HeroSection() {
 
   return (
     <section id="home" className="section">
-      <div className="w-full h-full flex flex-col items-center justify-center">
+      <div className="container">
         <div className="badge color-transition">
           <span className="status-dot">
             <span className="status-dot-ping" />

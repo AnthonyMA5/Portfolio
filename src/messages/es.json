@@ -18,6 +18,13 @@
     "experienceTitle": "Experiencia",
     "contactTitle": "Contacto"
   },
+  "About": {
+    "title": "Sobre mi",
+    "title2": "Desarrollador Multiplataforma",
+    "description": "Apasionado por la tecnología y la creación de software. Me gusta resolver problemas y crear soluciones innovadoras.",
+    "description2": "Soy desarrollador full-stack con experiencia práctica en la creación de aplicaciones web, móviles y de escritorio. Disfruto de la gestión integral del ciclo de vida del producto, desde el diseño del sistema hasta el último píxel.",
+    "description3": "Actualmente resido en Guadalajara, México, y estoy abierto a trabajar de forma remota o presencial. Me desenvuelvo en equipos colaborativos y dinámicos donde la calidad es fundamental."
+  },
   "Language": {
     "spanish": "Español",
     "english": "Inglés"

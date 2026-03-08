@@ -51,14 +51,17 @@
   .text-subheading {
     @apply text-light-500 dark:text-light-100 text-2xl font-medium;
   }
+  .text-title {
+    @apply text-light-600 dark:text-light-100 text-6xl font-medium;
+  }
   .text-body {
-    @apply text-light-500 dark:text-dark-50;
+    @apply text-light-500 dark:text-light-50 text-xl;
   }
   .text-caption {
-    @apply text-light-400 dark:text-dark-100;
+    @apply text-light-500 dark:text-light-100 font-light;
   }
   .text-muted {
-    @apply text-light-400 dark:text-dark-100;
+    @apply text-light-400 dark:text-light-100;
   }
   .text-accent {
     @apply text-brand-500 dark:text-brand-400;
@@ -73,18 +76,18 @@
   .btn-primary {
     @apply bg-brand-500 dark:bg-brand-500 text-light-50
            rounded-full px-6 py-2.5 font-medium text-base
-           hover:opacity-90 transition-opacity duration-500 cursor-pointer;
+           hover:opacity-90 transition-opacity duration-500 ease-in-out cursor-pointer;
   }
   .btn-secondary {
     @apply bg-light-200 dark:bg-dark-100 text-light-500
            dark:text-light-50 rounded-full px-6 py-2.5
            font-medium text-base border border-light-300
            dark:border-dark-200 hover:bg-light-300
-           dark:hover:bg-dark-300 transition-colors duration-500 cursor-pointer;
+           dark:hover:bg-dark-300 transition-colors duration-500 ease-in-out cursor-pointer;
   }
   .btn-ghost {
     @apply text-brand-500 dark:text-brand-400 font-medium
-           text-base hover:underline transition-all duration-500 cursor-pointer;
+           text-base hover:underline transition-all duration-500 ease-in-out cursor-pointer;
   }
 
   /* ── Components ── */
@@ -95,14 +98,16 @@
            font-medium flex items-center gap-2;
   }
   .chip {
-    @apply bg-light-200 dark:bg-dark-200
-           text-light-400 dark:text-dark-100
-           py-1 px-3 rounded-full text-xs font-medium;
+    @apply bg-brand-100/70 dark:bg-dark-200
+           text-brand-700 dark:text-brand-400
+           py-1.5 px-4 rounded-full text-base;
   }
   .card {
-    @apply bg-light-50 dark:bg-dark-300
-           border border-light-300 dark:border-dark-200
-           rounded-2xl shadow-sm p-6;
+    @apply bg-light-50 dark:bg-dark-200
+           rounded-2xl shadow-lg p-8;
+  }
+  .container {
+    @apply w-full h-full flex flex-col items-center justify-center;
   }
   .divider {
     @apply border-t border-light-300 dark:border-dark-200;

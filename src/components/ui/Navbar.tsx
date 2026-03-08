@@ -7,7 +7,7 @@ export default async function Navbar() {
   const t4 = await getTranslations();
 
   return (
-    <nav className="sticky top-0 w-full bg-nav border-base z-50 color-transition">
+    <nav className="sticky top-0 w-full bg-nav/50 border-base z-50 color-transition backdrop-blur-lg">
       <div className="w-full mx-auto py-5 flex justify-between items-center">
         <div className="flex w-1/5 justify-center">
           <h1 className="text-xl font-bold">{t4("title")}</h1>
