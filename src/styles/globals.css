@@ -29,6 +29,12 @@
   --color-status-available: #22c55e;
 }
 
+@layer base{
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @layer components {
   /* ── Backgrounds ── */
   .bg-app {

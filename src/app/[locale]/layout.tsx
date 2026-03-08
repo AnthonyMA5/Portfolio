@@ -26,11 +26,11 @@ export default async function RootLayout({ params, children }: Props) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className="bg-app">
+      <body className="bg-app color-transition">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class">
             <Navbar />
-            <main className="px-10">{children}</main>
+            <main className="px-10 pt-16">{children}</main>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
