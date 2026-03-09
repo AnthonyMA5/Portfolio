@@ -18,7 +18,7 @@ export function ThemeToggle() {
 
   return (
     <div
-      className="bg-primary-light-500 dark:bg-secondary-light-400 w-10 h-10 flex justify-center items-center rounded-full text-dark hover:bg-primary-light-600 dark:hover:bg-secondary-light-200 transition-colors duration-400 cursor-pointer"
+      className="bg-light-50 border border-light-200 dark:border-dark-200 dark:bg-dark-200 w-10 h-10 flex justify-center items-center rounded-full text-dark hover:bg-primary-light-600 dark:hover:bg-secondary-light-200 transition-colors duration-400 cursor-pointer"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       <Icon

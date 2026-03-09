@@ -17,16 +17,16 @@ export default async function Navbar() {
 
         <ul className="flex gap-x-6 w-3/5 justify-center">
           <li>
-            <a href="#about">{t("aboutTitle")}</a>
+            <a href="#about" className="hover:text-brand-700 hover:bg-brand-100/70 dark:hover:bg-dark-200 dark:hover:text-brand-400 rounded-3xl transition-colors duration-500 ease-in-out px-4 py-2">{t("aboutTitle")}</a>
           </li>
           <li>
-            <a href="#projects">{t("projectsTitle")}</a>
+            <a href="#projects" className="hover:text-brand-700 hover:bg-brand-100/70 dark:hover:bg-dark-200 dark:hover:text-brand-400 rounded-3xl transition-colors duration-500 ease-in-out px-4 py-2">{t("projectsTitle")}</a>
           </li>
           <li>
-            <a href="#experience">{t("experienceTitle")}</a>
+            <a href="#experience" className="hover:text-brand-700 hover:bg-brand-100/70 dark:hover:bg-dark-200 dark:hover:text-brand-400 rounded-3xl transition-colors duration-500 ease-in-out px-4 py-2">{t("experienceTitle")}</a>
           </li>
           <li>
-            <a href="#contact">{t("contactTitle")}</a>
+            <a href="#contact" className="hover:text-brand-700 hover:bg-brand-100/70 dark:hover:bg-dark-200 dark:hover:text-brand-400 rounded-3xl transition-colors duration-500 ease-in-out px-4 py-2">{t("contactTitle")}</a>
           </li>
         </ul>
 
