@@ -6,7 +6,7 @@ export default async function HomePage() {
   const t = await getTranslations("HomePage");
 
   return (
-    <div className="w-full h-screen color-transition bg-app">
+    <div className="w-full min-h-screen color-transition bg-app">
       <HeroSection />
       <AboutSection />
     </div>

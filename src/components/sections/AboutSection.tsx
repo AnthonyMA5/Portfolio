@@ -6,7 +6,7 @@ export default async function AboutSection() {
 
   return (
     <section id="about" className="section">
-      <div className="flex w-full h-full space-x-14">
+      <div className="flex flex-col md:flex-row w-full h-full md:space-x-14">
         <div className="container items-start space-y-8">
           <div className="chip">✦ {t("title")}</div>
           <p className="text-title">{t("title2")}</p>
@@ -20,50 +20,12 @@ export default async function AboutSection() {
             </p>
           </div>
         </div>
-        <div className="container items-start space-y-8">
-          <div className="chip">✦ Stack Tecnológico</div>
+        <div className="container items-start space-y-8 mt-10 md:mt-0">
+          <div className="chip">✦ {t("stackTitle")}</div>
           <div className="w-full flex flex-col gap-6">
             <div>
-              <p className="text-body font-semibold">
-                App Design & Development
-              </p>
-              <div className="grid grid-cols-3 gap-4 mt-3">
-                <TechCard
-                  name="Figma"
-                  lightSrc="/icons/design/figma.svg"
-                  darkSrc="/icons/design/figma.svg"
-                />
-                <TechCard
-                  name="Tailwind CSS"
-                  lightSrc="/icons/tech/tailwindcss.svg"
-                  darkSrc="/icons/tech/tailwindcss.svg"
-                />
-                <TechCard
-                  name="Flutter"
-                  lightSrc="/icons/tech/flutter.svg"
-                  darkSrc="/icons/tech/flutter.svg"
-                />
-                <TechCard
-                  name="Android"
-                  lightSrc="/icons/tech/android-icon.svg"
-                  darkSrc="/icons/tech/android-icon.svg"
-                />
-                <TechCard
-                  name="Swift"
-                  lightSrc="/icons/tech/swift.svg"
-                  darkSrc="/icons/tech/swift.svg"
-                />
-                <TechCard
-                  name="Java"
-                  lightSrc="/icons/tech/java.svg"
-                  darkSrc="/icons/tech/java.svg"
-                />
-              </div>
-            </div>
-
-            <div>
-              <p className="text-body font-semibold">Web Development</p>
-              <div className="grid grid-cols-3 gap-4 mt-3">
+              <p className="text-body font-semibold">{t("webDev")}</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-3">
                 <TechCard
                   name="JavaScript"
                   lightSrc="/icons/tech/javascript.svg"
@@ -98,8 +60,46 @@ export default async function AboutSection() {
             </div>
 
             <div>
-              <p className="text-body font-semibold">Backend & Databases</p>
-              <div className="grid grid-cols-3 gap-4 mt-3">
+              <p className="text-body font-semibold">
+                {t("appDev")}
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-3">
+                <TechCard
+                  name="Figma"
+                  lightSrc="/icons/design/figma.svg"
+                  darkSrc="/icons/design/figma.svg"
+                />
+                <TechCard
+                  name="Tailwind CSS"
+                  lightSrc="/icons/tech/tailwindcss.svg"
+                  darkSrc="/icons/tech/tailwindcss.svg"
+                />
+                <TechCard
+                  name="Flutter"
+                  lightSrc="/icons/tech/flutter.svg"
+                  darkSrc="/icons/tech/flutter.svg"
+                />
+                <TechCard
+                  name="Android"
+                  lightSrc="/icons/tech/android-icon.svg"
+                  darkSrc="/icons/tech/android-icon.svg"
+                />
+                <TechCard
+                  name="Swift"
+                  lightSrc="/icons/tech/swift.svg"
+                  darkSrc="/icons/tech/swift.svg"
+                />
+                <TechCard
+                  name="Java"
+                  lightSrc="/icons/tech/java.svg"
+                  darkSrc="/icons/tech/java.svg"
+                />
+              </div>
+            </div>
+
+            <div>
+              <p className="text-body font-semibold">{t("backendDb")}</p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-3">
                 <TechCard
                   name="Laravel"
                   lightSrc="/icons/tech/laravel.svg"

@@ -52,13 +52,13 @@
 
   /* ── Text ── */
   .text-heading {
-    @apply text-light-600 dark:text-light-100 text-8xl font-bold;
+    @apply text-light-600 dark:text-light-100 text-5xl md:text-8xl font-bold;
   }
   .text-subheading {
-    @apply text-light-500 dark:text-light-100 text-2xl font-medium;
+    @apply text-light-500 dark:text-light-100 text-lg md:text-2xl font-medium;
   }
   .text-title {
-    @apply text-light-600 dark:text-light-100 text-6xl font-medium;
+    @apply text-light-600 dark:text-light-100 text-4xl md:text-6xl font-medium;
   }
   .text-body {
     @apply text-light-500 dark:text-light-50 text-xl;

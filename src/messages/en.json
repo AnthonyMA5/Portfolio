@@ -23,7 +23,11 @@
     "title2": "Multiplatform Developer",
     "description": "Passionate about technology and software creation. I like to solve problems and create innovative solutions.",
     "description2": "I am a full-stack developer with practical experience in creating web, mobile, and desktop applications. I enjoy managing the entire product lifecycle, from system design to the last pixel.",
-    "description3": "Currently, I live in Guadalajara, Mexico, and I am open to working remotely or on-site. I thrive in collaborative and dynamic teams where quality is fundamental."
+    "description3": "Currently, I live in Guadalajara, Mexico, and I am open to working remotely or on-site. I thrive in collaborative and dynamic teams where quality is fundamental.",
+    "stackTitle": "Tech Stack",
+    "webDev": "Web Development",
+    "appDev": "App Design & Development",
+    "backendDb": "Backend & Databases"
   },
   "Language": {
     "spanish": "Spanish",
