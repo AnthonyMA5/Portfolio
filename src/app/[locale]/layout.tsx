@@ -30,7 +30,7 @@ export default async function RootLayout({ params, children }: Props) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider attribute="class">
             <Navbar />
-            <main className="px-10 pt-16">{children}</main>
+            <main className="pt-16">{children}</main>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

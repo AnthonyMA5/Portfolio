@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import TechCard from "../ui/TechCard";
+import { webTechStack, appTechStack, backendTechStack } from "@/data/techStack";
 
 export default async function AboutSection() {
   const t = await getTranslations("About");
@@ -26,36 +27,14 @@ export default async function AboutSection() {
             <div>
               <p className="text-body font-semibold">{t("webDev")}</p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-3">
-                <TechCard
-                  name="JavaScript"
-                  lightSrc="/icons/tech/javascript.svg"
-                  darkSrc="/icons/tech/javascript.svg"
-                />
-                <TechCard
-                  name="TypeScript"
-                  lightSrc="/icons/tech/typescript.svg"
-                  darkSrc="/icons/tech/typescript.svg"
-                />
-                <TechCard
-                  name="React"
-                  lightSrc="/icons/tech/react_light.svg"
-                  darkSrc="/icons/tech/react_dark.svg"
-                />
-                <TechCard
-                  name="Next.js"
-                  lightSrc="/icons/tech/nextjs.svg"
-                  darkSrc="/icons/tech/nextjs.svg"
-                />
-                <TechCard
-                  name="Vue"
-                  lightSrc="/icons/tech/vue.svg"
-                  darkSrc="/icons/tech/vue.svg"
-                />
-                <TechCard
-                  name="Nuxt"
-                  lightSrc="/icons/tech/nuxt.svg"
-                  darkSrc="/icons/tech/nuxt.svg"
-                />
+                {webTechStack.map((tech) => (
+                  <TechCard
+                    key={tech.id}
+                    name={tech.name}
+                    lightSrc={tech.lightSrc}
+                    darkSrc={tech.darkSrc}
+                  />
+                ))}
               </div>
             </div>
 
@@ -64,72 +43,28 @@ export default async function AboutSection() {
                 {t("appDev")}
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-3">
-                <TechCard
-                  name="Figma"
-                  lightSrc="/icons/design/figma.svg"
-                  darkSrc="/icons/design/figma.svg"
-                />
-                <TechCard
-                  name="Tailwind CSS"
-                  lightSrc="/icons/tech/tailwindcss.svg"
-                  darkSrc="/icons/tech/tailwindcss.svg"
-                />
-                <TechCard
-                  name="Flutter"
-                  lightSrc="/icons/tech/flutter.svg"
-                  darkSrc="/icons/tech/flutter.svg"
-                />
-                <TechCard
-                  name="Android"
-                  lightSrc="/icons/tech/android-icon.svg"
-                  darkSrc="/icons/tech/android-icon.svg"
-                />
-                <TechCard
-                  name="Swift"
-                  lightSrc="/icons/tech/swift.svg"
-                  darkSrc="/icons/tech/swift.svg"
-                />
-                <TechCard
-                  name="Java"
-                  lightSrc="/icons/tech/java.svg"
-                  darkSrc="/icons/tech/java.svg"
-                />
+                {appTechStack.map((tech) => (
+                  <TechCard
+                    key={tech.id}
+                    name={tech.name}
+                    lightSrc={tech.lightSrc}
+                    darkSrc={tech.darkSrc}
+                  />
+                ))}
               </div>
             </div>
 
             <div>
               <p className="text-body font-semibold">{t("backendDb")}</p>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-3">
-                <TechCard
-                  name="Laravel"
-                  lightSrc="/icons/tech/laravel.svg"
-                  darkSrc="/icons/tech/laravel.svg"
-                />
-                <TechCard
-                  name="PHP"
-                  lightSrc="/icons/tech/php_light.svg"
-                  darkSrc="/icons/tech/php_dark.svg"
-                />
-                <TechCard
-                  name="MariaDB"
-                  lightSrc="/icons/db/mariadb.svg"
-                  darkSrc="/icons/db/mariadb.svg"
-                />
-                <TechCard
-                  name="PostgreSQL"
-                  lightSrc="/icons/db/postgresql.svg"
-                  darkSrc="/icons/db/postgresql.svg"
-                />
-                <TechCard
-                  name="SQLServer"
-                  lightSrc="/icons/db/sql-server.svg"
-                  darkSrc="/icons/db/sql-server.svg"
-                />
-                <TechCard
-                  name="MongoDB"
-                  lightSrc="/icons/db/mongodb_light.svg"
-                  darkSrc="/icons/db/mongodb_dark.svg"
-                />
+                {backendTechStack.map((tech) => (
+                  <TechCard
+                    key={tech.id}
+                    name={tech.name}
+                    lightSrc={tech.lightSrc}
+                    darkSrc={tech.darkSrc}
+                  />
+                ))}
               </div>
             </div>
           </div>

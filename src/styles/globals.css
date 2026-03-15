@@ -27,9 +27,21 @@
   --color-brand-900: #091b9c;
 
   --color-status-available: #22c55e;
+
+  --color-type-web-bg: #e6f1fb;
+  --color-type-web-text: #0c447c;
+
+  --color-type-mobile-bg: #eaf3de;
+  --color-type-mobile-text: #27500a;
+
+  --color-type-desktop-bg: #eeedfe;
+  --color-type-desktop-text: #3c3489;
+
+  --color-type-uiux-bg: #faeeda;
+  --color-type-uiux-text: #633806;
 }
 
-@layer base{
+@layer base {
   html {
     scroll-behavior: smooth;
   }
@@ -48,6 +60,19 @@
   }
   .bg-nav {
     @apply bg-light-100 dark:bg-dark-400;
+  }
+
+  .badge-web {
+    @apply bg-type-web-bg     text-type-web-text;
+  }
+  .badge-mobile {
+    @apply bg-type-mobile-bg  text-type-mobile-text;
+  }
+  .badge-desktop {
+    @apply bg-type-desktop-bg text-type-desktop-text;
+  }
+  .badge-uiux {
+    @apply bg-type-uiux-bg    text-type-uiux-text;
   }
 
   /* ── Text ── */
@@ -73,7 +98,7 @@
     @apply text-light-400 dark:text-light-100;
   }
   .text-accent {
-    @apply text-brand-500 dark:text-brand-400;
+    @apply text-brand-800 dark:text-brand-400;
   }
 
   /* ── Borders ── */
@@ -104,6 +129,12 @@
     @apply bg-light-50 dark:bg-dark-200
            text-dark-100 dark:text-light-300
            py-2 px-6 rounded-full text-sm
+           font-medium flex items-center gap-2;
+  }
+  .badge-tech {
+    @apply bg-light-50 dark:bg-dark-200
+           text-dark-100 dark:text-light-300
+           px-3 py-2 rounded-full text-sm border border-light-300 border-dashed dark:border-dark-100 dark:border-dashed
            font-medium flex items-center gap-2;
   }
   .chip {
@@ -140,12 +171,12 @@
 
   /* ── Layout ── */
   .section {
-    @apply w-full py-20 px-6
+    @apply w-full py-20 px-10
          bg-light-100 dark:bg-dark-400
          transition-colors duration-500 ease-in-out;
   }
   .section2 {
-    @apply w-full py-20 px-6
+    @apply w-full py-20 px-10
          bg-light-200 dark:bg-dark-200
          transition-colors duration-500 ease-in-out;
   }
