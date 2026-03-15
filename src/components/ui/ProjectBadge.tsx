@@ -7,8 +7,9 @@ interface ProjectBadgeProps {
 
 export default function ProjectBadge({ variant, children }: ProjectBadgeProps) {
   return (
-    <p className={`badge-${variant} px-3 py-1 rounded-full font-medium text-sm`}>
-      {children}
-    </p>
+    <div className={`badge-${variant} px-3 py-1.5 rounded-full font-medium text-sm flex items-center gap-2 w-fit`}>
+      <span className="w-2 h-2 rounded-full bg-current shrink-0" aria-hidden="true" />
+      <span>{children}</span>
+    </div>
   );
 }
