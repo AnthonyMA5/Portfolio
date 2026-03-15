@@ -18,7 +18,7 @@ export default function TechCard({ name, lightSrc, darkSrc }: Props) {
       height={36}
     />
   </div>
-  <p className="text-caption mt-3">{name}</p>
+  <p className="text-caption2 mt-3">{name}</p>
 </div>
   );
 }

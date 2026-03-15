@@ -64,7 +64,10 @@
     @apply text-light-500 dark:text-light-50 text-xl;
   }
   .text-caption {
-    @apply text-light-500 dark:text-light-100 font-light;
+    @apply text-light-500 dark:text-light-100 font-normal;
+  }
+  .text-caption2 {
+    @apply text-light-500 dark:text-light-100 font-medium;
   }
   .text-muted {
     @apply text-light-400 dark:text-light-100;
