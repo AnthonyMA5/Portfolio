@@ -15,6 +15,7 @@ export interface ProjectData {
   id: string;
   title: string;
   imageSrc: string;
+  imageDarkSrc?: string;
   descriptionKey: string;
   projectBadges: ProjectBadgeData[];
   techBadges: TechBadgeData[];
@@ -56,7 +57,8 @@ export const projectsData: ProjectData[] = [
   {
     id: "plantilla",
     title: "Plantilla Multiusos",
-    imageSrc: "/images/plantilla.png",
+    imageSrc: "/images/plantilla_nuxt.png",
+    imageDarkSrc: "/images/plantilla_nuxt_dark.png",
     descriptionKey:
       "Rediseño completo del sitio web de la Universidad Tecnológica de la Zona Metropolitana de Guadalajara",
     projectBadges: [
@@ -73,6 +75,7 @@ export const projectsData: ProjectData[] = [
     id: "busme",
     title: "BusMe",
     imageSrc: "/images/busme.png",
+    imageDarkSrc: "/images/busme_dark.png",
     descriptionKey:
       "Rediseño completo del sitio web de la Universidad Tecnológica de la Zona Metropolitana de Guadalajara",
     projectBadges: [
@@ -82,9 +85,9 @@ export const projectsData: ProjectData[] = [
       { id: "pb-smartwatch", variant: "smartwatch", label: "Smartwatch" },
     ],
     techBadges: [
-      { id: "tb-nuxt", name: "Nuxt", lightSrc: "/icons/tech/nuxt.svg" },
-      { id: "tb-vue", name: "Vue", lightSrc: "/icons/tech/vue.svg" },
-      { id: "tb-typescript", name: "TypeScript", lightSrc: "/icons/tech/typescript.svg" },
+      { id: "tb-nextjs", name: "Next.js", lightSrc: "/icons/tech/nextjs.svg" },
+      { id: "tb-android", name: "Android", lightSrc: "/icons/tech/android-icon.svg" },
+      { id: "tb-apple", name: "Apple", lightSrc: "/icons/tech/apple_light.svg", darkSrc: "/icons/tech/apple_dark.svg" },
     ],
     link: "#",
   },

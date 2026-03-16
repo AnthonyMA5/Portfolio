@@ -11,13 +11,32 @@ interface Props {
 export default function ProjectCard({ project, viewProjectText }: Props) {
   return (
     <div className="w-full h-full rounded-2xl bg-surface shadow-lg overflow-hidden flex flex-col">
-      <Image 
-        src={project.imageSrc} 
-        alt={project.title} 
-        width={500} 
-        height={500} 
-        className="object-cover w-full h-auto aspect-video" 
-      />
+      {project.imageDarkSrc ? (
+        <>
+          <Image 
+            src={project.imageSrc} 
+            alt={project.title} 
+            width={500} 
+            height={500} 
+            className="object-cover w-full h-auto aspect-video dark:hidden" 
+          />
+          <Image 
+            src={project.imageDarkSrc} 
+            alt={project.title} 
+            width={500} 
+            height={500} 
+            className="object-cover w-full h-auto aspect-video hidden dark:block" 
+          />
+        </>
+      ) : (
+        <Image 
+          src={project.imageSrc} 
+          alt={project.title} 
+          width={500} 
+          height={500} 
+          className="object-cover w-full h-auto aspect-video" 
+        />
+      )}
       <div className="p-5 flex flex-col flex-1">
         <div className="flex items-start md:items-center justify-between gap-2 flex-col md:flex-row">
           <p className="text-lg font-medium text-dark-400 dark:text-light-100">{project.title}</p>
