@@ -6,9 +6,10 @@ import { ProjectData } from "@/data/projects";
 interface Props {
   project: ProjectData;
   viewProjectText: string;
+  onViewProject?: () => void;
 }
 
-export default function ProjectCard({ project, viewProjectText }: Props) {
+export default function ProjectCard({ project, viewProjectText, onViewProject }: Props) {
   return (
     <div className="w-full h-full rounded-2xl bg-surface shadow-lg overflow-hidden flex flex-col">
       {project.imageDarkSrc ? (
@@ -60,12 +61,15 @@ export default function ProjectCard({ project, viewProjectText }: Props) {
               />
             ))}
           </div>
-          <a
-            href={project.link || "#"}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              if (onViewProject) onViewProject();
+            }}
             className="py-1 rounded-full font-medium text-md text-accent cursor-pointer hover:underline color-transition"
           >
             {viewProjectText}
-          </a>
+          </button>
         </div>
       </div>
     </div>

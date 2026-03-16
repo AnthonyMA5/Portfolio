@@ -11,11 +11,20 @@ export interface TechBadgeData {
   darkSrc?: string;
 }
 
+export interface ProjectGalleryImage {
+  lightSrc: string;
+  darkSrc?: string;
+}
+
 export interface ProjectData {
   id: string;
   title: string;
   imageSrc: string;
   imageDarkSrc?: string;
+  gallery?: ProjectGalleryImage[];
+  year?: string;
+  githubUrl?: string;
+  demoUrl?: string;
   descriptionKey: string;
   projectBadges: ProjectBadgeData[];
   techBadges: TechBadgeData[];
@@ -27,6 +36,15 @@ export const projectsData: ProjectData[] = [
     id: "arte-jardin",
     title: "Arte Jardín",
     imageSrc: "/images/arte_jardin.png",
+    year: "2024",
+    gallery: [
+      { lightSrc: "/images/arte_jardin.png" },
+      { lightSrc: "/images/arte_jardin.png" },
+      { lightSrc: "/images/arte_jardin.png" },
+      { lightSrc: "/images/arte_jardin.png" },
+    ],
+    githubUrl: "#",
+    demoUrl: "#",
     descriptionKey:
       "Diseño de interfaz y experiencia de usuario para un sitio web sobre paisajismo junto a su versión móvil", // Later can map to a translation key
     projectBadges: [
@@ -41,8 +59,14 @@ export const projectsData: ProjectData[] = [
     id: "utzmg",
     title: "Portal UTZMG",
     imageSrc: "/images/utzmg.png",
+    year: "2025",
+    githubUrl: "#",
+    demoUrl: "#",
+    gallery: [
+      { lightSrc: "/images/utzmg.png" },
+    ],
     descriptionKey:
-      "Rediseño completo del sitio web de la Universidad Tecnológica de la Zona Metropolitana de Guadalajara",
+      "Rediseño completo del sitio web institucional de la UTZMG, enfocado en mejorar la experiencia de navegación para estudiantes y aspirantes.",
     projectBadges: [
       { id: "pb-uiux", variant: "uiux", label: "UX/UI" },
       { id: "pb-web", variant: "web", label: "Web" },
@@ -59,6 +83,12 @@ export const projectsData: ProjectData[] = [
     title: "Plantilla Multiusos",
     imageSrc: "/images/plantilla_nuxt.png",
     imageDarkSrc: "/images/plantilla_nuxt_dark.png",
+    year: "2025",
+    githubUrl: "#",
+    demoUrl: "#",
+    gallery: [
+      { lightSrc: "/images/plantilla_nuxt.png", darkSrc: "/images/plantilla_nuxt_dark.png" },
+    ],
     descriptionKey:
       "Rediseño completo del sitio web de la Universidad Tecnológica de la Zona Metropolitana de Guadalajara",
     projectBadges: [
@@ -76,6 +106,12 @@ export const projectsData: ProjectData[] = [
     title: "BusMe",
     imageSrc: "/images/busme.png",
     imageDarkSrc: "/images/busme_dark.png",
+    year: "2025",
+    githubUrl: "#",
+    demoUrl: "#",
+    gallery: [
+      { lightSrc: "/images/busme.png", darkSrc: "/images/busme_dark.png" },
+    ],
     descriptionKey:
       "Rediseño completo del sitio web de la Universidad Tecnológica de la Zona Metropolitana de Guadalajara",
     projectBadges: [

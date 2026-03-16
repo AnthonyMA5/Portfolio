@@ -1,7 +1,25 @@
-import { projectsData } from "@/data/projects";
+"use client";
+
+import { useState } from "react";
+import { projectsData, ProjectData } from "@/data/projects";
 import ProjectCard from "../ui/ProjectCard";
+import ProjectModal from "../ui/ProjectModal";
 
 export default function ProjectsSection() {
+  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(null);
+
+  const handleOpenModal = (project: ProjectData) => {
+    setSelectedProject(project);
+    // Prevent background scrolling
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProject(null);
+    // Restore scrolling
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <section id="projects" className="section2">
       <div className="container items-start mx-auto px-4">
@@ -12,11 +30,20 @@ export default function ProjectsSection() {
             <ProjectCard 
               key={project.id} 
               project={project} 
-              viewProjectText="Ver proyecto" 
+              viewProjectText="Ver proyecto"
+              onViewProject={() => handleOpenModal(project)}
             />
           ))}
         </div>
       </div>
+
+      {/* Render Modal */}
+      {selectedProject && (
+        <ProjectModal 
+          project={selectedProject} 
+          onClose={handleCloseModal} 
+        />
+      )}
     </section>
   );
 }
