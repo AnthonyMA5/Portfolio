@@ -20,7 +20,7 @@ export default function ProjectCard({ project, viewProjectText }: Props) {
       />
       <div className="p-5 flex flex-col flex-1">
         <div className="flex items-start md:items-center justify-between gap-2 flex-col md:flex-row">
-          <p className="text-lg font-medium text-dark-400">{project.title}</p>
+          <p className="text-lg font-medium text-dark-400 dark:text-light-100">{project.title}</p>
           <div className="flex items-center gap-2 flex-wrap">
             {project.projectBadges.map((badge) => (
               <ProjectBadge key={badge.id} variant={badge.variant}>

@@ -39,6 +39,9 @@
 
   --color-type-uiux-bg: #faeeda;
   --color-type-uiux-text: #633806;
+
+  --color-type-smartwatch-bg: #ffe4e6;
+  --color-type-smartwatch-text: #881337;
 }
 
 @layer base {
@@ -50,29 +53,32 @@
 @layer components {
   /* ── Backgrounds ── */
   .bg-app {
-    @apply bg-light-100 dark:bg-dark-400;
+    @apply bg-light-100 dark:bg-dark-400 transition-colors duration-500 ease-in-out;
   }
   .bg-surface {
-    @apply bg-light-50 dark:bg-dark-300;
+    @apply bg-light-50 dark:bg-dark-300 transition-colors duration-500 ease-in-out;
   }
   .bg-surface2 {
-    @apply bg-light-200 dark:bg-dark-200;
+    @apply bg-light-200 dark:bg-dark-200 transition-colors duration-500 ease-in-out;
   }
   .bg-nav {
-    @apply bg-light-100 dark:bg-dark-400;
+    @apply bg-light-100 dark:bg-dark-400 transition-colors duration-500 ease-in-out;
   }
 
   .badge-web {
-    @apply bg-type-web-bg     text-type-web-text;
+    @apply bg-type-web-bg     text-type-web-text transition-colors duration-500 ease-in-out;
   }
   .badge-mobile {
-    @apply bg-type-mobile-bg  text-type-mobile-text;
+    @apply bg-type-mobile-bg  text-type-mobile-text transition-colors duration-500 ease-in-out;
   }
   .badge-desktop {
-    @apply bg-type-desktop-bg text-type-desktop-text;
+    @apply bg-type-desktop-bg text-type-desktop-text transition-colors duration-500 ease-in-out;
   }
   .badge-uiux {
-    @apply bg-type-uiux-bg    text-type-uiux-text;
+    @apply bg-type-uiux-bg    text-type-uiux-text transition-colors duration-500 ease-in-out;
+  }
+  .badge-smartwatch {
+    @apply bg-type-smartwatch-bg text-type-smartwatch-text transition-colors duration-500 ease-in-out;
   }
 
   /* ── Text ── */
@@ -103,25 +109,28 @@
 
   /* ── Borders ── */
   .border-base {
-    @apply border-b border-light-300 dark:border-dark-200;
+    @apply border-b border-light-300 dark:border-dark-200 transition-colors duration-500 ease-in-out;
   }
 
   /* ── Buttons ── */
   .btn-primary {
     @apply bg-brand-500 dark:bg-brand-500 text-light-50
            rounded-full px-6 py-2.5 font-medium text-base
-           hover:opacity-90 transition-opacity duration-500 ease-in-out cursor-pointer;
+           hover:opacity-90 cursor-pointer;
+    transition: opacity 500ms ease-in-out, background-color 500ms ease-in-out, color 0s !important;
   }
   .btn-secondary {
     @apply bg-light-200 dark:bg-dark-100 text-light-500
            dark:text-light-50 rounded-full px-6 py-2.5
            font-medium text-base border border-light-300
            dark:border-dark-200 hover:bg-light-300
-           dark:hover:bg-dark-300 transition-colors duration-500 ease-in-out cursor-pointer;
+           dark:hover:bg-dark-300 cursor-pointer;
+    transition: background-color 500ms ease-in-out, border-color 500ms ease-in-out, color 0s !important;
   }
   .btn-ghost {
     @apply text-brand-500 dark:text-brand-400 font-medium
-           text-base hover:underline transition-all duration-500 ease-in-out cursor-pointer;
+           text-base hover:underline cursor-pointer;
+    transition: color 0s !important;
   }
 
   /* ── Components ── */
@@ -129,28 +138,28 @@
     @apply bg-light-50 dark:bg-dark-200
            text-dark-100 dark:text-light-300
            py-2 px-6 rounded-full text-sm
-           font-medium flex items-center gap-2;
+           font-medium flex items-center gap-2 transition-colors duration-500 ease-in-out;
   }
   .badge-tech {
     @apply bg-light-50 dark:bg-dark-200
            text-dark-100 dark:text-light-300
            px-3 py-2 rounded-full text-sm border border-light-300 border-dashed dark:border-dark-100 dark:border-dashed
-           font-medium flex items-center gap-2;
+           font-medium flex items-center gap-2 transition-colors duration-500 ease-in-out;
   }
   .chip {
     @apply bg-brand-100/70 dark:bg-dark-200
            text-brand-700 dark:text-brand-400
-           py-1.5 px-4 rounded-full text-base;
+           py-1.5 px-4 rounded-full text-base transition-colors duration-500 ease-in-out;
   }
   .card {
     @apply bg-light-50 dark:bg-dark-200
-           rounded-2xl shadow-lg p-8;
+           rounded-2xl shadow-lg p-8 transition-colors duration-500 ease-in-out;
   }
   .container {
-    @apply w-full h-full flex flex-col items-center justify-center;
+    @apply w-full h-full flex flex-col items-center justify-center transition-colors duration-500 ease-in-out;
   }
   .divider {
-    @apply border-t border-light-300 dark:border-dark-200;
+    @apply border-t border-light-300 dark:border-dark-200 transition-colors duration-500 ease-in-out;
   }
   .navbar-link {
     @apply hover:text-brand-700 hover:bg-brand-100/70 dark:hover:bg-dark-200 dark:hover:text-brand-400 rounded-3xl transition-colors duration-500 ease-in-out px-4 py-2;

@@ -19,7 +19,7 @@ export default function TechBadge({ name, lightSrc, darkSrc }: TechBadgeProps) {
           height={20} 
         />
       </div>
-      <span>{name}</span>
+      <span className="text-caption2">{name}</span>
     </div>
   );
 }
