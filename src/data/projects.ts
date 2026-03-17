@@ -24,36 +24,47 @@ export interface ProjectData {
   gallery?: ProjectGalleryImage[];
   year?: string;
   githubUrl?: string;
+  figmaUrl?: string;
   demoUrl?: string;
   descriptionKey: string;
+  modalDescriptionKey?: string;
   projectBadges: ProjectBadgeData[];
   techBadges: TechBadgeData[];
+  modalTechBadges?: TechBadgeData[];
   link?: string;
 }
 
 export const projectsData: ProjectData[] = [
   {
     id: "arte-jardin",
-    title: "Arte Jardín",
-    imageSrc: "/images/arte_jardin.png",
-    year: "2024",
+    title: "Arte Jardín - Paisajismo",
+    imageSrc: "/images/arte_jardin/arte_jardin_00.png",
+    year: "2025",
     gallery: [
-      { lightSrc: "/images/arte_jardin.png" },
-      { lightSrc: "/images/arte_jardin.png" },
-      { lightSrc: "/images/arte_jardin.png" },
-      { lightSrc: "/images/arte_jardin.png" },
+      { lightSrc: "/images/arte_jardin/arte_jardin_00.png" },
+      { lightSrc: "/images/arte_jardin/arte_jardin_01.png" },
+      { lightSrc: "/images/arte_jardin/arte_jardin_02.png" },
+      { lightSrc: "/images/arte_jardin/arte_jardin_03.png" },
+      { lightSrc: "/images/arte_jardin/arte_jardin_04.png" },
+      { lightSrc: "/images/arte_jardin/arte_jardin_05.png" },
     ],
-    githubUrl: "#",
+    githubUrl: "",
+    figmaUrl: "https://www.figma.com/design/oQaN07esCncZ3ND9s1u2CT/Arte-Jard%C3%ADn--Paisajismo----Website?node-id=0-1&t=zz73a0cl4yLBEx3G-1",
     demoUrl: "#",
     descriptionKey:
       "Diseño de interfaz y experiencia de usuario para un sitio web sobre paisajismo junto a su versión móvil", // Later can map to a translation key
+    modalDescriptionKey:
+      "Diseño de interfaz y experiencia de usuario para un sitio web sobre paisajismo junto a su versión móvil. En este proyecto se priorizó la usabilidad y la estética natural, implementando componentes altamente interactivos y un diseño responsivo desde cero.",
     projectBadges: [
       { id: "pb-uiux", variant: "uiux", label: "UX/UI" },
     ],
     techBadges: [
       { id: "tb-figma", name: "Figma", lightSrc: "/icons/design/figma.svg" },
     ],
-    link: "#",
+    modalTechBadges: [
+      { id: "tb-figma", name: "Figma", lightSrc: "/icons/design/figma.svg" },
+    ],
+    link: "",
   },
   {
     id: "utzmg",

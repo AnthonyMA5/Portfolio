@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { X, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Github, Figma, ExternalLink } from "lucide-react";
 import { ProjectData } from "@/data/projects";
 import ProjectBadge from "./ProjectBadge";
 import TechBadge from "./TechBadge";
@@ -52,10 +52,13 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       <div className="relative w-full max-w-5xl max-h-[90vh] bg-surface rounded-2xl md:rounded-4xl shadow-2xl overflow-y-auto flex flex-col z-10 animate-in fade-in zoom-in-95 duration-200">
         
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-light-200 dark:border-dark-200">
+        <div className="flex items-center justify-between p-6 border-b border-light-400">
           <div>
             <h2 className="text-2xl font-bold text-dark-400 dark:text-light-100">{project.title}</h2>
             <div className="flex items-center gap-2 mt-2 flex-wrap">
+              <div className="text-caption2">
+                {project.year || "2025"}
+              </div>
               {project.projectBadges.map((badge) => (
                 <ProjectBadge key={badge.id} variant={badge.variant}>
                   {badge.label}
@@ -65,7 +68,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
           <button 
             onClick={onClose}
-            className="p-2 rounded-full border border-light-200 dark:border-dark-200 text-dark-400 dark:text-light-100 hover:bg-light-100 dark:hover:bg-dark-300 transition-colors shrink-0"
+            className="p-2 rounded-full border border-light-400 dark:border-light-200 text-dark-400 dark:text-light-100 hover:bg-light-100 dark:hover:bg-dark-300 cursor-pointer transition-colors shrink-0"
             aria-label="Cerrar modal"
           >
             <X size={20} />
@@ -85,13 +88,13 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                       src={gallery[currentImageIndex].lightSrc} 
                       alt={`${project.title} image ${currentImageIndex + 1}`} 
                       fill 
-                      className="object-contain dark:hidden" 
+                      className="object-cover dark:hidden" 
                     />
                     <Image 
                       src={gallery[currentImageIndex].darkSrc!} 
                       alt={`${project.title} image ${currentImageIndex + 1}`} 
                       fill 
-                      className="object-contain hidden dark:block" 
+                      className="object-cover hidden dark:block" 
                     />
                   </>
                 ) : (
@@ -99,7 +102,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     src={gallery[currentImageIndex].lightSrc} 
                     alt={`${project.title} image ${currentImageIndex + 1}`} 
                     fill 
-                    className="object-contain" 
+                    className="object-cover" 
                   />
                 )}
                 
@@ -155,67 +158,65 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           {/* Right Column: Info */}
-          <div className="w-full lg:w-2/5 flex flex-col border-t lg:border-t-0 lg:border-l border-light-200 dark:border-dark-200 pt-6 lg:pt-0 lg:pl-6">
+          <div className="w-full lg:w-2/5 flex flex-col border-t lg:border-t-0 lg:border-l border-light-400 pt-6 lg:pt-0 lg:pl-6 pb-6 lg:pb-0">
             
             <div className="flex-1">
-              <h3 className="text-sm font-semibold tracking-wider text-dark-300 dark:text-light-300 uppercase mb-3">Descripción</h3>
+              <h3 className="text-caption2 tracking-wider uppercase mb-3">Descripción</h3>
               <p className="text-dark-400 dark:text-light-100 leading-relaxed text-md mb-8">
-                {project.descriptionKey}
+                {project.modalDescriptionKey || project.descriptionKey}
               </p>
               
-              <h3 className="text-sm font-semibold tracking-wider text-dark-300 dark:text-light-300 uppercase mb-4">Stack Tecnológico</h3>
-              <div className="flex flex-wrap gap-3">
-                {project.techBadges.map((tech) => (
-                  <div 
+              <h3 className="text-caption2 tracking-wider uppercase mb-4">Stack Tecnológico</h3>
+              <div className="flex flex-wrap gap-3 mb-8">
+                {(project.modalTechBadges || project.techBadges).map((tech) => (
+                  <TechBadge 
                     key={tech.id} 
-                    className="flex items-center gap-2 px-3 py-2 bg-light-100 dark:bg-dark-200 rounded-lg border border-light-200 dark:border-dark-300"
-                  >
-                     <ThemedIcon 
-                        lightSrc={tech.lightSrc} 
-                        darkSrc={tech.darkSrc || tech.lightSrc} 
-                        alt={tech.name} 
-                        width={18} 
-                        height={18} 
-                      />
-                    <span className="text-sm font-medium text-dark-400 dark:text-light-100">{tech.name}</span>
-                  </div>
+                    name={tech.name} 
+                    lightSrc={tech.lightSrc} 
+                    darkSrc={tech.darkSrc} 
+                  />
                 ))}
               </div>
             </div>
 
+            {/* Acciones ubicadas siempre al final gracias al flex-col */}
+            <div className="mt-auto flex flex-col gap-3 w-full">
+              {project.githubUrl && (
+                <a 
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-light-200 dark:border-dark-200 text-dark-400 dark:text-light-100 font-medium hover:bg-light-100 dark:hover:bg-dark-300 transition-colors"
+                >
+                  <Github size={18} /> Ver en GitHub
+                </a>
+              )}
+
+              {project.figmaUrl && (
+                <a 
+                  href={project.figmaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-light-200 dark:border-dark-200 text-dark-400 dark:text-light-100 font-medium hover:bg-light-100 dark:hover:bg-dark-300 transition-colors"
+                >
+                  <Figma size={18} /> Ver en Figma
+                </a>
+              )}
+
+              {project.demoUrl && (
+                <a 
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-light-200 dark:border-dark-200 bg-dark-400 dark:bg-light-100 text-light-100 dark:text-dark-400 font-medium hover:bg-dark-300 dark:hover:bg-white transition-colors shadow-sm"
+                >
+                  <ExternalLink size={18} /> Demo en vivo
+                </a>
+              )}
+            </div>
+
           </div>
         </div>
-
-        {/* Footer */}
-        <div className="flex flex-col sm:flex-row items-center justify-between p-6 border-t border-light-200 dark:border-dark-200 bg-light-50/50 dark:bg-dark-400/50 rounded-b-2xl md:rounded-b-4xl gap-4">
-          <div className="text-dark-300 dark:text-light-300 font-medium">
-            {project.year || "2024"}
-          </div>
-          
-          <div className="flex items-center gap-3 w-full sm:w-auto">
-            {project.githubUrl && (
-              <a 
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-none flex items-center justify-center px-4 py-2 rounded-xl border border-light-200 dark:border-dark-200 text-dark-400 dark:text-light-100 font-medium hover:bg-light-100 dark:hover:bg-dark-300 transition-colors w-full"
-              >
-                Ver GitHub
-              </a>
-            )}
-            {project.demoUrl && (
-              <a 
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-light-200 dark:border-dark-200 bg-white dark:bg-dark-400 text-dark-400 dark:text-light-100 font-medium hover:bg-light-50 dark:hover:bg-dark-300 transition-colors shadow-sm w-full"
-              >
-                Demo en vivo <ArrowRight size={18} />
-              </a>
-            )}
-          </div>
-        </div>
-
       </div>
     </div>
   );
