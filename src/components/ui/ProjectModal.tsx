@@ -207,7 +207,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   href={project.figmaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-light-200 dark:border-dark-200 text-dark-400 dark:text-light-100 font-medium hover:bg-light-100 dark:hover:bg-dark-300 transition-colors"
+                  className="w-full flex color-transition btn-secondary-alternative items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium"
                 >
                   <Figma size={18} /> Ver en Figma
                 </a>
@@ -218,7 +218,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   href={project.demoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-light-200 dark:border-dark-200 bg-dark-400 dark:bg-light-100 text-light-100 dark:text-dark-400 font-medium hover:bg-dark-300 dark:hover:bg-white transition-colors shadow-sm"
+                  className="w-full flex items-center btn-primary justify-center gap-2 px-4 py-3 rounded-xl shadow-sm"
                 >
                   <ExternalLink size={18} /> Demo en vivo
                 </a>

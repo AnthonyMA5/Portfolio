@@ -159,9 +159,11 @@
 
   /* ── Buttons ── */
   .btn-primary {
-    @apply bg-brand-500 dark:bg-brand-500 text-light-50
+    @apply bg-brand-500 dark:bg-brand-600 text-light-50
+           border border-brand-600 hover:bg-brand-400
+           dark:border-dark-200 dark:hover:bg-brand-400
            rounded-full px-6 py-2.5 font-medium text-base
-           hover:opacity-90 cursor-pointer;
+           cursor-pointer;
     transition: opacity 500ms ease-in-out, background-color 500ms ease-in-out, color 0s !important;
   }
   .btn-secondary {
@@ -170,6 +172,14 @@
            font-medium text-base border border-light-300
            dark:border-dark-200 hover:bg-light-300
            dark:hover:bg-dark-300 cursor-pointer;
+    transition: background-color 500ms ease-in-out, border-color 500ms ease-in-out, color 0s !important;
+  }
+  .btn-secondary-alternative {
+    @apply bg-light-50 dark:bg-dark-100 text-dark-200
+           dark:text-light-50 rounded-full px-6 py-2.5
+           font-medium text-base border border-light-300
+           dark:border-dark-200 hover:bg-light-300
+           dark:hover:bg-dark-300 dark:hover:border-light-400 cursor-pointer;
     transition: background-color 500ms ease-in-out, border-color 500ms ease-in-out, color 0s !important;
   }
   .btn-ghost {
