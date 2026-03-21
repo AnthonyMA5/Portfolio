@@ -50,7 +50,6 @@ export const projectsData: ProjectData[] = [
     ],
     githubUrl: "",
     figmaUrl: "https://www.figma.com/design/oQaN07esCncZ3ND9s1u2CT/Arte-Jard%C3%ADn--Paisajismo----Website?node-id=0-1&t=zz73a0cl4yLBEx3G-1",
-    demoUrl: "#",
     descriptionKey:
       "Diseño de interfaz y experiencia de usuario para un sitio web sobre paisajismo junto a su versión móvil", // Later can map to a translation key
     modalDescriptionKey:
@@ -69,12 +68,16 @@ export const projectsData: ProjectData[] = [
   {
     id: "utzmg",
     title: "Portal UTZMG",
-    imageSrc: "/images/utzmg.png",
+    imageSrc: "/images/utzmg/utzmg_00.png",
     year: "2025",
-    githubUrl: "#",
-    demoUrl: "#",
+    figmaUrl: "https://www.figma.com/design/7rJweal6xTV0eF42afUmKK/UTZMG---Website?node-id=0-1&t=v9okifYXRCpSxQ37-1",
     gallery: [
-      { lightSrc: "/images/utzmg.png" },
+      { lightSrc: "/images/utzmg/utzmg_00.png" },
+      { lightSrc: "/images/utzmg/utzmg_01.png" },
+      { lightSrc: "/images/utzmg/utzmg_02.png" },
+      { lightSrc: "/images/utzmg/utzmg_03.png" },
+      { lightSrc: "/images/utzmg/utzmg_04.png" },
+      { lightSrc: "/images/utzmg/utzmg_05.png" },
     ],
     descriptionKey:
       "Rediseño completo del sitio web institucional de la UTZMG, enfocado en mejorar la experiencia de navegación para estudiantes y aspirantes.",
@@ -138,5 +141,4 @@ export const projectsData: ProjectData[] = [
     ],
     link: "#",
   },
-  // Add more projects here
 ];
