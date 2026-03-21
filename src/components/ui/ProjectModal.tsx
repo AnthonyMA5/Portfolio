@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, Github, Figma, ExternalLink } from "lucide-react";
 import { ProjectData } from "@/data/projects";
@@ -15,20 +15,30 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isClosing, setIsClosing] = useState(false);
+
+  const handleClose = useCallback(() => {
+    setIsClosing(true);
+    setTimeout(() => {
+      onClose();
+      setIsClosing(false);
+    }, 400); // Wait for the exit animation duration
+  }, [onClose]);
 
   // Reset index when project changes
   useEffect(() => {
     setCurrentImageIndex(0);
+    setIsClosing(false);
   }, [project]);
 
   // Handle escape key to close
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") handleClose();
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose]);
+  }, [handleClose]);
 
   if (!project) return null;
 
@@ -44,12 +54,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/40 backdrop-blur-sm transition-opacity">
+    <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/40 backdrop-blur-sm ${isClosing ? 'animate-overlay-hide' : 'animate-overlay-show'}`}>
       {/* Click away to close */}
-      <div className="absolute inset-0" onClick={onClose} />
+      <div className="absolute inset-0" onClick={handleClose} />
       
       {/* Modal Container */}
-      <div className="relative w-full max-w-5xl max-h-[90vh] bg-surface rounded-2xl md:rounded-4xl shadow-2xl overflow-y-auto flex flex-col z-10 animate-in fade-in zoom-in-95 duration-200">
+      <div className={`relative w-full max-w-5xl max-h-[90vh] bg-surface rounded-2xl md:rounded-4xl shadow-2xl overflow-y-auto flex flex-col z-10 ${isClosing ? 'animate-modal-out' : 'animate-modal-in'}`}>
         
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-light-400">
@@ -67,7 +77,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
           </div>
           <button 
-            onClick={onClose}
+            onClick={handleClose}
             className="p-2 rounded-full border border-light-400 dark:border-light-200 text-dark-400 dark:text-light-100 hover:bg-light-100 dark:hover:bg-dark-300 cursor-pointer transition-colors shrink-0"
             aria-label="Cerrar modal"
           >
