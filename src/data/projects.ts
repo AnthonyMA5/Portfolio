@@ -71,6 +71,7 @@ export const projectsData: ProjectData[] = [
     imageSrc: "/images/utzmg/utzmg_00.png",
     year: "2025",
     figmaUrl: "https://www.figma.com/design/7rJweal6xTV0eF42afUmKK/UTZMG---Website?node-id=0-1&t=v9okifYXRCpSxQ37-1",
+    demoUrl: "https://utzmg-website.vercel.app/",
     gallery: [
       { lightSrc: "/images/utzmg/utzmg_00.png" },
       { lightSrc: "/images/utzmg/utzmg_01.png" },
@@ -95,13 +96,17 @@ export const projectsData: ProjectData[] = [
   {
     id: "plantilla",
     title: "Plantilla Multiusos",
-    imageSrc: "/images/plantilla_nuxt.png",
-    imageDarkSrc: "/images/plantilla_nuxt_dark.png",
+    imageSrc: "/images/nuxt_template/nuxt_template_00.png",
+    imageDarkSrc: "/images/nuxt_template/nuxt_template_06.png",
     year: "2025",
-    githubUrl: "#",
-    demoUrl: "#",
+    demoUrl: "https://nuxt-template-beta.vercel.app/",
     gallery: [
-      { lightSrc: "/images/plantilla_nuxt.png", darkSrc: "/images/plantilla_nuxt_dark.png" },
+      { lightSrc: "/images/nuxt_template/nuxt_template_00.png", darkSrc: "/images/nuxt_template/nuxt_template_06.png" },
+      { lightSrc: "/images/nuxt_template/nuxt_template_01.png", darkSrc: "/images/nuxt_template/nuxt_template_07.png" },
+      { lightSrc: "/images/nuxt_template/nuxt_template_02.png", darkSrc: "/images/nuxt_template/nuxt_template_08.png" },
+      { lightSrc: "/images/nuxt_template/nuxt_template_03.png", darkSrc: "/images/nuxt_template/nuxt_template_09.png" },
+      { lightSrc: "/images/nuxt_template/nuxt_template_04.png", darkSrc: "/images/nuxt_template/nuxt_template_10.png" },
+      { lightSrc: "/images/nuxt_template/nuxt_template_05.png", darkSrc: "/images/nuxt_template/nuxt_template_11.png" },
     ],
     descriptionKey:
       "Rediseño completo del sitio web de la Universidad Tecnológica de la Zona Metropolitana de Guadalajara",
