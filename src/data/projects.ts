@@ -51,9 +51,9 @@ export const projectsData: ProjectData[] = [
     githubUrl: "",
     figmaUrl: "https://www.figma.com/design/oQaN07esCncZ3ND9s1u2CT/Arte-Jard%C3%ADn--Paisajismo----Website?node-id=0-1&t=zz73a0cl4yLBEx3G-1",
     descriptionKey:
-      "Diseño de interfaz y experiencia de usuario para un sitio web sobre paisajismo junto a su versión móvil", // Later can map to a translation key
+      "Diseño UI/UX integral para ecosistema web y móvil, priorizando la usabilidad y estética natural.",
     modalDescriptionKey:
-      "Diseño de interfaz y experiencia de usuario para un sitio web sobre paisajismo junto a su versión móvil. En este proyecto se priorizó la usabilidad y la estética natural, implementando componentes altamente interactivos y un diseño responsivo desde cero.",
+      "Diseño UI/UX para web y móvil sobre paisajismo. Ideé una experiencia visual de 'estética natural' con alta interactividad, construyendo desde cero una interfaz intuitiva y responsiva centrada en el usuario.",
     projectBadges: [
       { id: "pb-uiux", variant: "uiux", label: "UX/UI" },
     ],
@@ -82,6 +82,8 @@ export const projectsData: ProjectData[] = [
     ],
     descriptionKey:
       "Rediseño completo del sitio web institucional de la UTZMG, enfocado en mejorar la experiencia de navegación para estudiantes y aspirantes.",
+    modalDescriptionKey:
+      "Rediseño UI/UX y desarrollo web orientado a los estudiantes. Construí de cero una plataforma responsiva de estética natural con componentes modernos de alta interactividad.",
     projectBadges: [
       { id: "pb-uiux", variant: "uiux", label: "UX/UI" },
       { id: "pb-web", variant: "web", label: "Web" },
@@ -94,45 +96,29 @@ export const projectsData: ProjectData[] = [
     link: "#",
   },
   {
-    id: "plantilla",
-    title: "Plantilla Multiusos",
-    imageSrc: "/images/nuxt_template/nuxt_template_00.png",
-    imageDarkSrc: "/images/nuxt_template/nuxt_template_06.png",
-    year: "2025",
-    demoUrl: "https://nuxt-template-beta.vercel.app/",
-    gallery: [
-      { lightSrc: "/images/nuxt_template/nuxt_template_00.png", darkSrc: "/images/nuxt_template/nuxt_template_06.png" },
-      { lightSrc: "/images/nuxt_template/nuxt_template_01.png", darkSrc: "/images/nuxt_template/nuxt_template_07.png" },
-      { lightSrc: "/images/nuxt_template/nuxt_template_02.png", darkSrc: "/images/nuxt_template/nuxt_template_08.png" },
-      { lightSrc: "/images/nuxt_template/nuxt_template_03.png", darkSrc: "/images/nuxt_template/nuxt_template_09.png" },
-      { lightSrc: "/images/nuxt_template/nuxt_template_04.png", darkSrc: "/images/nuxt_template/nuxt_template_10.png" },
-      { lightSrc: "/images/nuxt_template/nuxt_template_05.png", darkSrc: "/images/nuxt_template/nuxt_template_11.png" },
-    ],
-    descriptionKey:
-      "Rediseño completo del sitio web de la Universidad Tecnológica de la Zona Metropolitana de Guadalajara",
-    projectBadges: [
-      { id: "pb-web", variant: "web", label: "Web" },
-    ],
-    techBadges: [
-      { id: "tb-nuxt", name: "Nuxt", lightSrc: "/icons/tech/nuxt.svg" },
-      { id: "tb-vue", name: "Vue", lightSrc: "/icons/tech/vue.svg" },
-      { id: "tb-typescript", name: "TypeScript", lightSrc: "/icons/tech/typescript.svg" },
-    ],
-    link: "#",
-  },
-  {
     id: "busme",
     title: "BusMe",
     imageSrc: "/images/busme.png",
     imageDarkSrc: "/images/busme_dark.png",
     year: "2025",
-    githubUrl: "#",
-    demoUrl: "#",
+    figmaUrl: "https://www.figma.com/design/SD3aYXIAc1eTWy0HLylME7/BusMe---Multiplatform?node-id=161-201&t=g3wEzXXj2F5WMI9N-1",
+    demoUrl: "https://busme.netlify.app",
     gallery: [
       { lightSrc: "/images/busme.png", darkSrc: "/images/busme_dark.png" },
+      { lightSrc: "/images/busme/busme_web_01.png"},
+      { lightSrc: "/images/busme/busme_web_02.png"},
+      { lightSrc: "/images/busme/busme_web_03.png"},
+      { lightSrc: "/images/busme/busme_mbl_01.png"},
+      { lightSrc: "/images/busme/busme_mbl_02.png"},
+      { lightSrc: "/images/busme/busme_mbl_03.png"},
+      { lightSrc: "/images/busme/busme_smw_01.png"},
+      { lightSrc: "/images/busme/busme_smw_02.png"},
+      { lightSrc: "/images/busme/busme_smw_03.png"},
     ],
     descriptionKey:
-      "Rediseño completo del sitio web de la Universidad Tecnológica de la Zona Metropolitana de Guadalajara",
+      "Diseño UI/UX y desarrollo líder de aplicaciones móviles (Flutter, Swift) y smartwatch.",
+    modalDescriptionKey:
+      "Lideré el diseño y desarrollo de las aplicaciones. Construí una primera iteración multiplataforma en Flutter, evolucionando después a un desarrollo 100% nativo en Swift para iOS/WatchOS, apoyando además en el frontend web.",
     projectBadges: [
       { id: "pb-uiux", variant: "uiux", label: "UX/UI" },
       { id: "pb-web", variant: "web", label: "Web" },
@@ -146,4 +132,32 @@ export const projectsData: ProjectData[] = [
     ],
     link: "#",
   },
+  {
+    id: "plantilla",
+    title: "Plantilla Multiusos",
+    imageSrc: "/images/nuxt_template/nuxt_template_00.png",
+    year: "2025",
+    demoUrl: "https://nuxt-template-beta.vercel.app/",
+    gallery: [
+      { lightSrc: "/images/nuxt_template/nuxt_template_00.png" },
+      { lightSrc: "/images/nuxt_template/nuxt_template_01.png" },
+      { lightSrc: "/images/nuxt_template/nuxt_template_02.png" },
+      { lightSrc: "/images/nuxt_template/nuxt_template_03.png" },
+      { lightSrc: "/images/nuxt_template/nuxt_template_04.png" },
+    ],
+    descriptionKey:
+      "Desarrollo de ecosistema escalable en Nuxt con sistema de componentes personalizables.",
+    modalDescriptionKey:
+      "Desarrollo frontend de plantilla escalable en Nuxt. Diseñé un sistema modular de páginas y componentes adaptables, implementando funcionalidades avanzadas como modo oscuro nativo, internacionalización (i18n) y bandeja de notificaciones.",
+    projectBadges: [
+      { id: "pb-web", variant: "web", label: "Web" },
+    ],
+    techBadges: [
+      { id: "tb-nuxt", name: "Nuxt", lightSrc: "/icons/tech/nuxt.svg" },
+      { id: "tb-vue", name: "Vue", lightSrc: "/icons/tech/vue.svg" },
+      { id: "tb-typescript", name: "TypeScript", lightSrc: "/icons/tech/typescript.svg" },
+    ],
+    link: "#",
+  },
+  
 ];
