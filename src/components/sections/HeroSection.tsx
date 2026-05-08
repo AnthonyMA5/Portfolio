@@ -22,8 +22,12 @@ export default async function HeroSection() {
           {t("description")}
         </p>
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-8 md:mt-10 w-full sm:w-auto">
-          <button className="btn-primary w-full sm:w-auto">{t("projectsButton")}</button>
-          <button className="btn-secondary w-full sm:w-auto">{t("contactButton")}</button>
+          <a href="#projects" className="btn-primary w-full sm:w-auto text-center">
+            {t("projectsButton")}
+          </a>
+          <a href="#contact" className="btn-secondary w-full sm:w-auto text-center">
+            {t("contactButton")}
+          </a>
         </div>
       </div>
     </section>

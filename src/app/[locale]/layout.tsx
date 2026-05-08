@@ -5,6 +5,12 @@ import Navbar from "@/components/ui/Navbar";
 import { ThemeProvider } from "next-themes";
 import "../../styles/globals.css";
 import { getMessages } from "next-intl/server";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Anthony Martinez - Developer",
+  description: "Portfolio of Anthony Martinez, Web Developer",
+};
 
 type Props = {
   children: React.ReactNode;

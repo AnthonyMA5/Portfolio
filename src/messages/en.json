@@ -36,5 +36,16 @@
   "Theme": {
     "light": "Light",
     "dark": "Dark"
+  },
+  "Experience": {
+    "title": "Experience",
+    "title2": "Places where I have worked",
+    "description": "Here you will learn about my work experiences",
+    "description2": "Here you will learn about my work experiences",
+    "description3": "Here you will learn about my work experiences"
+  },
+  "Contact": {
+    "title": "Contact",
+    "description": "Contact"
   }
 }
