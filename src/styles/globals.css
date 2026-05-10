@@ -149,6 +149,9 @@
   .text-caption2 {
     @apply text-light-500 dark:text-light-100 font-medium;
   }
+  .text-caption3 {
+    @apply text-light-500 dark:text-light-100 font-semibold text-lg;
+  }
   .text-muted {
     @apply text-light-400 dark:text-light-100;
   }

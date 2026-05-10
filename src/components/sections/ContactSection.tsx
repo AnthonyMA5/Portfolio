@@ -6,7 +6,7 @@ export default function ContactSection() {
 
     return (
         <section id="contact" className="section">
-            <div className="container text-center bg-dark-300 border-2 border-dark-200 p-8 md:p-12 lg:p-20 rounded-3xl">
+            <div className="container text-center bg-light-50 shadow-[0_0_15px] shadow-brand-500/30 dark:bg-dark-300 dark:border-dark-200 p-8 md:p-12 lg:p-20 rounded-3xl">
                 <div className="flex flex-col lg:flex-row w-full h-full gap-10">
                     <div className="container items-start space-y-8">
                         <div className="chip">✉️ {t("title")}</div>
@@ -28,17 +28,17 @@ export default function ContactSection() {
                         </div>
                     </div>
                     <div className="w-full h-full grid grid-rows-3 gap-4 sm:gap-6 mt-4 lg:mt-0">
-                        <div className="flex flex-col sm:flex-row w-full h-full bg-dark-200 border border-dark-100 p-4 sm:p-6 rounded-xl items-start sm:items-center justify-between gap-2 sm:gap-0">
-                            <p className="text-body">{t("status")}</p>
-                            <p className="text-body">{t("statusValue")}</p>
+                        <div className="flex flex-col sm:flex-row w-full h-full bg-light-100 dark:bg-dark-200 border border-light-300 dark:border-dark-100 p-4 sm:p-6 rounded-xl items-start sm:items-center justify-between gap-2 sm:gap-0">
+                            <p className="text-caption2">{t("status")}</p>
+                            <p className="text-caption3">{t("statusValue")}</p>
                         </div>
-                        <div className="flex flex-col sm:flex-row w-full h-full bg-dark-200 border border-dark-100 p-4 sm:p-6 rounded-xl items-start sm:items-center justify-between gap-2 sm:gap-0">
-                            <p className="text-body">{t("location")}</p>
-                            <p className="text-body">{t("locationValue")}</p>
+                        <div className="flex flex-col sm:flex-row w-full h-full bg-light-100 dark:bg-dark-200 border border-light-300 dark:border-dark-100 p-4 sm:p-6 rounded-xl items-start sm:items-center justify-between gap-2 sm:gap-0">
+                            <p className="text-caption2">{t("location")}</p>
+                            <p className="text-caption3">{t("locationValue")}</p>
                         </div>
-                        <div className="flex flex-col sm:flex-row w-full h-full bg-dark-200 border border-dark-100 p-4 sm:p-6 rounded-xl items-start sm:items-center justify-between gap-2 sm:gap-0">
-                            <p className="text-body">{t("workMode")}</p>
-                            <p className="text-body">{t("workModeValue")}</p>
+                        <div className="flex flex-col sm:flex-row w-full h-full bg-light-100 dark:bg-dark-200 border border-light-300 dark:border-dark-100 p-4 sm:p-6 rounded-xl items-start sm:items-center justify-between gap-2 sm:gap-0">
+                            <p className="text-caption2">{t("workMode")}</p>
+                            <p className="text-caption3">{t("workModeValue")}</p>
                         </div>
                     </div>
 
