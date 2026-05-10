@@ -11,7 +11,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full bg-nav/50 border-base z-50 color-transition backdrop-blur-lg">
+    <nav className="fixed top-0 left-0 right-0 w-full bg-light-50/50 dark:bg-dark-400/70 color-transition backdrop-blur-lg">
       <div className="w-full mx-auto px-6 py-5 flex justify-between items-center">
         <div className="flex md:w-1/5 justify-start md:justify-center">
           <h1 className="text-xl font-bold">

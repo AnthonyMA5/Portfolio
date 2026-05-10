@@ -41,8 +41,29 @@
     "title": "Experience",
     "title2": "Places where I have worked",
     "description": "Here you will learn about my work experiences",
-    "description2": "Here you will learn about my work experiences",
-    "description3": "Here you will learn about my work experiences"
+    "experiences": [
+      {
+        "title": "Software Development and Management Engineer",
+        "company": "Daido Metal Mexico",
+        "location": "Tlajomulco de Zúñiga, Jalisco",
+        "date": "January 2025 - Present",
+        "description": "I led the digital transformation of the plant through the 'Paperless' system (Java/MySQL), eliminating paper usage in 15 production lines. I reduced order closing time by 99% (from 2 hours to <1 minute) and eliminated 100% of manual calculation errors. I achieved a validated saving of 72,000 minutes per month in reporting tasks and reduced data availability latency for supervision from 24 hours to only 10 minutes. I currently manage the system expansion to an additional 26 lines."
+      },
+      {
+        "title": "Frontend Developer",
+        "company": "iBtest - Innovative Board Test",
+        "location": "Tlaquepaque, Jalisco (Remote)",
+        "date": "February - May 2024",
+        "description": "I developed the visual architecture of a modular inventory control system using Vue.js, Nuxt, and TailwindCSS. I implemented critical administrative (CRUD) functionalities, data visualization through interactive charts, and real-time notifications. I optimized the product's accessibility and reach by integrating multilingual support (i18n) and dark mode, delivering a scalable platform ready for industrial commercialization."
+      },
+      {
+        "title": "Mobile Developer (Professional Internship)",
+        "company": "AVSYS",
+        "location": "Guadalajara, Jalisco (Remote)",
+        "date": "May - August 2023",
+        "description": "I led the technological migration of a web ticketing system to a cross-platform mobile solution using Flutter. I designed an intuitive user experience (UX)-centered interface in Figma that resolved the usability deficiencies of the previous system. I developed and integrated digital ticketing modules with dynamic scanning, consuming an API in Node.js/Express to ensure real-time data synchronization with MySQL."
+      }
+    ]
   },
   "Contact": {
     "title": "Contact",

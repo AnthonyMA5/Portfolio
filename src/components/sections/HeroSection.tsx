@@ -13,7 +13,7 @@ export default async function HeroSection() {
           </span>
           <p>{t("status")}</p>
         </div>
-        <p className="text-4xl lg:text-8xl md:text-heading mt-6 md:mt-8 font-bold text-light-600 dark:text-light-100">
+        <p className="font-bricolage text-[4rem] md:text-[8.5rem] lg:text-[10rem] leading-none mt-6 md:mt-8 font-bold text-light-600 dark:text-light-100 tracking-tight">
           {t("name")}
           <br />
           {t("lastName")}

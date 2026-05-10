@@ -41,8 +41,29 @@
     "title": "Experiencia",
     "title2": "Lugares donde he trabajado",
     "description": "Aquí conocerás mis experiencias laborales",
-    "description2": "Aquí conocerás mis experiencias laborales",
-    "description3": "Aquí conocerás mis experiencias laborales"
+    "experiences": [
+      {
+        "title": "Ingeniero en Desarrollo y Gestión de Software",
+        "company": "Daido Metal México",
+        "location": "Tlajomulco de Zúñiga, Jalisco",
+        "date": "Enero 2025 - Presente",
+        "description": "Lideré la transformación digital de la planta mediante el sistema \"Paperless\" (Java/MySQL), eliminando el uso de papel en 15 líneas de producción. Reduje el tiempo de cierre de órdenes en un 99% (de 2 horas a <1 minuto) y eliminé el 100% de los errores de cálculo manual. Logré un ahorro validado de 72,000 minutos mensuales en tareas de reporteo y reduje la latencia de disponibilidad de datos para supervisión de 24 horas a solo 10 minutos. Actualmente gestiono la expansión del sistema a 26 líneas adicionales."
+      },
+      {
+        "title": "Desarrollador Frontend",
+        "company": "iBtest - Innovative Board Test",
+        "location": "Tlaquepaque, Jalisco (Remoto)",
+        "date": "Febrero - Mayo 2024",
+        "description": "Desarrollé la arquitectura visual de un sistema modular de control de inventarios utilizando Vue.js, Nuxt y TailwindCSS. Implementé funcionalidades críticas de administración (CRUD), visualización de datos mediante gráficas interactivas y notificaciones en tiempo real. Optimicé la accesibilidad y el alcance del producto integrando soporte multilenguaje (i18n) y modo oscuro, entregando una plataforma escalable lista para su comercialización industrial."
+      },
+      {
+        "title": "Desarrollador Móvil (Prácticas Profesionales)",
+        "company": "AVSYS",
+        "location": "Guadalajara, Jalisco (Remoto)",
+        "date": "Mayo - Agosto 2023",
+        "description": "Lideré la migración tecnológica de un sistema de ticketing web hacia una solución móvil multiplataforma utilizando Flutter. Diseñé en Figma una interfaz intuitiva centrada en la experiencia de usuario (UX) que resolvió las deficiencias de usabilidad del sistema anterior. Desarrollé e integré módulos de boletos digitales con escaneo dinámico, consumiendo una API en Node.js/Express para garantizar la sincronización de datos en tiempo real con MySQL."
+      }
+    ]
   },
   "Contact": {
     "title": "Contacto",

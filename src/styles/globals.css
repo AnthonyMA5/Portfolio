@@ -92,6 +92,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+  }
+  body {
+    font-family: var(--font-dm-sans), sans-serif;
   }
 }
 
@@ -160,27 +164,32 @@
   /* ── Buttons ── */
   .btn-primary {
     @apply bg-brand-500 dark:bg-brand-600 text-light-50
-           border border-brand-600 hover:bg-brand-400
-           dark:border-dark-200 dark:hover:bg-brand-400
-           rounded-full px-6 py-2.5 font-medium text-base
-           cursor-pointer;
-    transition: opacity 500ms ease-in-out, background-color 500ms ease-in-out, color 0s !important;
+           border border-brand-500 hover:bg-brand-400 hover:border-brand-400
+           dark:border-dark-200 dark:hover:bg-brand-500 dark:hover:border-brand-500
+           rounded-full px-8 py-3 font-medium text-base
+           cursor-pointer shadow-[0_0_15px] shadow-brand-500/40 dark:shadow-brand-400/30
+           hover:-translate-y-1 hover:shadow-[0_0_25px] hover:shadow-brand-500/60 dark:hover:shadow-brand-400/50;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
   .btn-secondary {
-    @apply bg-light-200 dark:bg-dark-100 text-light-500
-           dark:text-light-50 rounded-full px-6 py-2.5
-           font-medium text-base border border-light-300
-           dark:border-dark-200 hover:bg-light-300
-           dark:hover:bg-dark-300 cursor-pointer;
-    transition: background-color 500ms ease-in-out, border-color 500ms ease-in-out, color 0s !important;
+    @apply bg-light-50 dark:bg-dark-100 text-light-500
+           dark:text-light-50 rounded-full px-8 py-3
+           font-medium text-base border border-light-200
+           dark:border-dark-100 hover:bg-light-200 hover:border-light-300
+           dark:hover:bg-dark-200 dark:hover:border-light-400 cursor-pointer
+           shadow-[0_0_10px] shadow-light-400/10 dark:shadow-dark-400/30
+           hover:-translate-y-1 hover:shadow-[0_0_20px] hover:shadow-light-400/20 dark:hover:shadow-dark-400/50;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
   .btn-secondary-alternative {
     @apply bg-light-50 dark:bg-dark-100 text-dark-200
            dark:text-light-50 rounded-full px-6 py-2.5
            font-medium text-base border border-light-300
            dark:border-dark-200 hover:bg-light-300
-           dark:hover:bg-dark-300 dark:hover:border-light-400 cursor-pointer;
-    transition: background-color 500ms ease-in-out, border-color 500ms ease-in-out, color 0s !important;
+           dark:hover:bg-dark-300 dark:hover:border-light-400 cursor-pointer
+           shadow-[0_0_10px] shadow-light-400/10 dark:shadow-dark-400/30
+           hover:-translate-y-1 hover:shadow-[0_0_20px] hover:shadow-light-400/20 dark:hover:shadow-dark-400/50;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
   .btn-ghost {
     @apply text-brand-500 dark:text-brand-400 font-medium
@@ -235,18 +244,23 @@
 
   /* ── Layout ── */
   .section {
-    @apply w-full py-20 px-10
+    @apply w-full min-h-[100dvh] flex flex-col justify-center py-20 px-10
          bg-light-100 dark:bg-dark-400
          transition-colors duration-500 ease-in-out;
+    scroll-snap-align: start;
   }
   .section2 {
-    @apply w-full py-20 px-10
+    @apply w-full min-h-[100dvh] flex flex-col justify-center py-20 px-10
          bg-light-200 dark:bg-dark-200
          transition-colors duration-500 ease-in-out;
+    scroll-snap-align: start;
   }
 
   /* ── Utilities ── */
   .color-transition {
     @apply transition-colors duration-500 ease-in-out;
+  }
+  .font-bricolage {
+    font-family: var(--font-bricolage), sans-serif;
   }
 }
