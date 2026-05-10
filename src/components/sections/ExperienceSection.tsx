@@ -20,23 +20,23 @@ export default function ExperienceSection() {
                     <p className="text-body">{t("description")}</p>
                 </div>
                 <div className="container items-start space-y-8">
-                    <div className="w-full h-full py-6">
-                        <div className="w-full p-8">
-                            <div className="flex flex-col items-start gap-y-12">
+                    <div className="w-full h-full py-2 sm:py-6">
+                        <div className="w-full lg:p-8">
+                            <div className="flex flex-col items-start gap-y-10 sm:gap-y-12">
                                 {(t.raw("experiences") as ExperienceItem[]).map((experience, index) => (
-                                    <div key={index} className="flex gap-x-5 w-full">
-                                        <div className="w-[1%] flex flex-col items-center py-2 gap-y-3">
-                                            <div className="w-2.5 h-3 bg-brand-300 rounded-full"></div>
+                                    <div key={index} className="flex gap-x-4 sm:gap-x-5 w-full">
+                                        <div className="w-4 sm:w-6 shrink-0 flex flex-col items-center py-1.5 gap-y-3">
+                                            <div className="w-2.5 h-2.5 sm:h-3 bg-brand-300 rounded-full shrink-0"></div>
                                             <div className="w-0.5 h-full bg-light-400/70 rounded-full"></div>
                                         </div>
-                                        <div className="w-[99%] flex flex-col gap-y-2">
-                                            <p>{experience.title}</p>
-                                            <div className="flex gap-x-5">
+                                        <div className="flex-1 flex flex-col gap-y-2">
+                                            <p className="font-semibold text-lg">{experience.title}</p>
+                                            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-dark-400 dark:text-light-200">
                                                 <p>🏢 {experience.company}</p>
                                                 <p>📍 {experience.location}</p>
                                                 <p>📅 {experience.date}</p>
                                             </div>
-                                            <p className="text-sm">{experience.description}</p>
+                                            <p className="text-sm mt-2">{experience.description}</p>
                                         </div>
                                     </div>
                                 ))}

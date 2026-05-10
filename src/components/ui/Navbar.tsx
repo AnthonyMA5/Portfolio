@@ -34,10 +34,8 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle Button */}
-        <div className="md:hidden flex items-center gap-x-4">
-          <ThemeToggle />
-          <LanguageToggle />
-          <button onClick={() => setIsOpen(!isOpen)} className="text-light-600 dark:text-light-100 p-2">
+        <div className="md:hidden flex items-center gap-x-2">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-light-600 dark:text-light-100 p-2" aria-label="Toggle Menu">
             {isOpen ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -53,13 +51,17 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-nav/95 backdrop-blur-lg border-t border-light-300 dark:border-dark-200">
+        <div className="md:hidden bg-nav/95 backdrop-blur-lg border-t border-light-300 dark:border-dark-200 pb-6">
           <ul className="flex flex-col px-6 py-4 space-y-4">
             <li><a href="#about" onClick={() => setIsOpen(false)} className="navbar-link block">{t("aboutTitle")}</a></li>
             <li><a href="#projects" onClick={() => setIsOpen(false)} className="navbar-link block">{t("projectsTitle")}</a></li>
             <li><a href="#experience" onClick={() => setIsOpen(false)} className="navbar-link block">{t("experienceTitle")}</a></li>
             <li><a href="#contact" onClick={() => setIsOpen(false)} className="navbar-link block">{t("contactTitle")}</a></li>
           </ul>
+          <div className="flex px-6 pt-2 items-center gap-x-4">
+            <ThemeToggle />
+            <LanguageToggle />
+          </div>
         </div>
       )}
     </nav>
