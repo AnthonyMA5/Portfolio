@@ -7,7 +7,7 @@ export default async function AboutSection() {
 
   return (
     <section id="about" className="section">
-      <div className="flex flex-col md:flex-row w-full h-full md:space-x-14">
+      <div className="flex flex-col md:flex-row w-full h-full gap-10 md:gap-0 md:space-x-14">
         <div className="container items-start space-y-8">
           <div className="chip">✦ {t("title")}</div>
           <p className="text-title">{t("title2")}</p>

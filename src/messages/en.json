@@ -65,8 +65,30 @@
       }
     ]
   },
+  "Projects": {
+    "title": "Projects",
+    "subtitle": "Some projects I have built",
+    "viewProject": "View project",
+    "descriptionTitle": "Description",
+    "techStackTitle": "Tech Stack",
+    "viewGithub": "View on GitHub",
+    "viewFigma": "View on Figma",
+    "liveDemo": "Live Demo",
+    "closeModal": "Close modal"
+  },
   "Contact": {
     "title": "Contact",
-    "description": "Contact"
+    "description": "Contact",
+    "letsWorkTogether": "Let's work together",
+    "email": "anthony_ar2003@icloud.com",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "resume": "Resume",
+    "status": "Status",
+    "statusValue": "Looking for job opportunities",
+    "location": "Location",
+    "locationValue": "Guadalajara, Jalisco",
+    "workMode": "Work Modality",
+    "workModeValue": "Full Time, Freelance or Temporary"
   }
 }

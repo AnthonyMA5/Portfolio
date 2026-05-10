@@ -7,6 +7,7 @@ import { ProjectData } from "@/data/projects";
 import ProjectBadge from "./ProjectBadge";
 import TechBadge from "./TechBadge";
 import ThemedIcon from "./ThemeIcon";
+import { useTranslations } from "next-intl";
 
 interface ProjectModalProps {
   project: ProjectData | null;
@@ -14,6 +15,7 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const t = useTranslations("Projects");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -79,7 +81,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           <button 
             onClick={handleClose}
             className="p-2 rounded-full border border-light-400 dark:border-light-200 text-dark-400 dark:text-light-100 hover:bg-light-100 dark:hover:bg-dark-300 cursor-pointer transition-colors shrink-0"
-            aria-label="Cerrar modal"
+            aria-label={t("closeModal")}
           >
             <X size={20} />
           </button>
@@ -171,12 +173,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           <div className="w-full lg:w-2/5 flex flex-col border-t lg:border-t-0 lg:border-l border-light-400 pt-6 lg:pt-0 lg:pl-6 pb-6 lg:pb-0">
             
             <div className="flex-1">
-              <h3 className="text-caption2 tracking-wider uppercase mb-3">Descripción</h3>
+              <h3 className="text-caption2 tracking-wider uppercase mb-3">{t("descriptionTitle")}</h3>
               <p className="text-dark-400 dark:text-light-100 leading-relaxed text-md mb-8">
                 {project.modalDescriptionKey || project.descriptionKey}
               </p>
               
-              <h3 className="text-caption2 tracking-wider uppercase mb-4">Stack Tecnológico</h3>
+              <h3 className="text-caption2 tracking-wider uppercase mb-4">{t("techStackTitle")}</h3>
               <div className="flex flex-wrap gap-3 mb-8">
                 {(project.modalTechBadges || project.techBadges).map((tech) => (
                   <TechBadge 
@@ -198,7 +200,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-light-200 dark:border-dark-200 text-dark-400 dark:text-light-100 font-medium hover:bg-light-100 dark:hover:bg-dark-300 transition-colors"
                 >
-                  <Github size={18} /> Ver en GitHub
+                  <Github size={18} /> {t("viewGithub")}
                 </a>
               )}
 
@@ -209,7 +211,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   rel="noopener noreferrer"
                   className="w-full flex color-transition btn-secondary-alternative items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium"
                 >
-                  <Figma size={18} /> Ver en Figma
+                  <Figma size={18} /> {t("viewFigma")}
                 </a>
               )}
 
@@ -220,7 +222,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   rel="noopener noreferrer"
                   className="w-full flex items-center btn-primary justify-center gap-2 px-4 py-3 rounded-xl shadow-sm"
                 >
-                  <ExternalLink size={18} /> Demo en vivo
+                  <ExternalLink size={18} /> {t("liveDemo")}
                 </a>
               )}
             </div>

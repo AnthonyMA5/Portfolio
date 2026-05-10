@@ -13,7 +13,7 @@ export default function ExperienceSection() {
 
     return (
         <section id="experience" className="section">
-            <div className="flex flex-col md:flex-row w-full h-full">
+            <div className="flex flex-col md:flex-row w-full h-full gap-10 md:gap-4">
                 <div className="container items-start space-y-8">
                     <div className="chip">✦ {t("title")}</div>
                     <p className="text-title">{t("title2")}</p>
