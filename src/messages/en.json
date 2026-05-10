@@ -1,15 +1,15 @@
 {
   "title": "Portfolio",
   "HomePage": {
-    "title": "My portfolio"
+    "title": "Portfolio"
   },
   "Hero": {
-    "status": "Available for new opportunities",
+    "status": "Available for new technological challenges",
     "name": "Anthony",
     "lastName": "Martinez",
-    "description": "Software Development and Management Engineer in mobile, web and desktop platforms with a focus on the UX/UI area.",
-    "projectsButton": "View projects",
-    "contactButton": "Contact me"
+    "description": "Software Engineer specialized in industrial process digitalization. I build scalable solutions that transform complex data into intuitive interfaces for web, mobile, and desktop.",
+    "projectsButton": "View Projects",
+    "contactButton": "Contact Me"
   },
   "Navigator": {
     "homeTitle": "Home",
@@ -19,15 +19,15 @@
     "contactTitle": "Contact"
   },
   "About": {
-    "title": "About me",
-    "title2": "Multiplatform Developer",
-    "description": "Passionate about technology and software creation. I like to solve problems and create innovative solutions.",
-    "description2": "I am a full-stack developer with practical experience in creating web, mobile, and desktop applications. I enjoy managing the entire product lifecycle, from system design to the last pixel.",
-    "description3": "Currently, I live in Guadalajara, Mexico, and I am open to working remotely or on-site. I thrive in collaborative and dynamic teams where quality is fundamental.",
+    "title": "About Me",
+    "title2": "Digital Solutions Architect",
+    "description": "Engineer focused on bridging the gap between physical processes and digital efficiency. My specialty is designing and developing software ecosystems that not only function but optimize operational productivity.",
+    "description2": "Proficient in the Full-stack (Vue, Node, Flutter), I manage the entire product lifecycle. My main focus is precision engineering: from robust backend logic to an impeccable User Experience (UX) that ensures system adoption.",
+    "description3": "Based in Guadalajara, Mexico. My methodology is built on dynamic collaboration and delivering software that generates a measurable real-world impact, whether remotely or on-site.",
     "stackTitle": "Tech Stack",
-    "webDev": "Web Development",
-    "appDev": "App Design & Development",
-    "backendDb": "Backend & Databases"
+    "webDev": "Web Ecosystem",
+    "appDev": "Mobile Solutions & UX",
+    "backendDb": "Infrastructure & Data"
   },
   "Language": {
     "spanish": "Spanish",
@@ -39,36 +39,36 @@
   },
   "Experience": {
     "title": "Experience",
-    "title2": "Places where I have worked",
-    "description": "Here you will learn about my work experiences",
+    "title2": "Professional Path",
+    "description": "Impact and solutions delivered in my previous roles.",
     "experiences": [
       {
-        "title": "Software Development and Management Engineer",
-        "company": "Daido Metal Mexico",
-        "location": "Tlajomulco de Zúñiga, Jalisco",
+        "title": "Software Engineer",
+        "company": "Daido Metal México",
+        "location": "Tlajomulco, Jalisco",
         "date": "January 2025 - Present",
-        "description": "I led the digital transformation of the plant through the 'Paperless' system (Java/MySQL), eliminating paper usage in 15 production lines. I reduced order closing time by 99% (from 2 hours to <1 minute) and eliminated 100% of manual calculation errors. I achieved a validated saving of 72,000 minutes per month in reporting tasks and reduced data availability latency for supervision from 24 hours to only 10 minutes. I currently manage the system expansion to an additional 26 lines."
+        "description": "• Led the 'Paperless' system, digitalizing 15 production lines.\n• Reduced order closing time from 2 hours to < 1 minute (99% improvement).\n• Eliminated 100% of manual calculation errors on the shop floor.\n• Validated savings of 1,200 hours per month in reporting tasks."
       },
       {
         "title": "Frontend Developer",
-        "company": "iBtest - Innovative Board Test",
-        "location": "Tlaquepaque, Jalisco (Remote)",
+        "company": "iBtest",
+        "location": "Tlaquepaque, Jalisco",
         "date": "February - May 2024",
-        "description": "I developed the visual architecture of a modular inventory control system using Vue.js, Nuxt, and TailwindCSS. I implemented critical administrative (CRUD) functionalities, data visualization through interactive charts, and real-time notifications. I optimized the product's accessibility and reach by integrating multilingual support (i18n) and dark mode, delivering a scalable platform ready for industrial commercialization."
+        "description": "• Developed the visual architecture for a modular inventory system using Vue/Nuxt.\n• Implemented interactive dashboards for real-time data visualization.\n• Integrated multi-language support (i18n) and industrial accessibility optimization."
       },
       {
-        "title": "Mobile Developer (Professional Internship)",
+        "title": "Mobile Developer",
         "company": "AVSYS",
-        "location": "Guadalajara, Jalisco (Remote)",
+        "location": "Guadalajara, Jalisco",
         "date": "May - August 2023",
-        "description": "I led the technological migration of a web ticketing system to a cross-platform mobile solution using Flutter. I designed an intuitive user experience (UX)-centered interface in Figma that resolved the usability deficiencies of the previous system. I developed and integrated digital ticketing modules with dynamic scanning, consuming an API in Node.js/Express to ensure real-time data synchronization with MySQL."
+        "description": "• Migrated a physical ticketing system to a mobile solution using Flutter.\n• Designed an intuitive UX interface in Figma, reducing the learning curve.\n• Integrated dynamic ticket scanning with real-time synchronization via Node.js."
       }
     ]
   },
   "Projects": {
     "title": "Projects",
-    "subtitle": "Some projects I have built",
-    "viewProject": "View project",
+    "subtitle": "A selection of my recent work",
+    "viewProject": "View Project",
     "descriptionTitle": "Description",
     "techStackTitle": "Tech Stack",
     "viewGithub": "View on GitHub",
@@ -85,10 +85,10 @@
     "linkedin": "LinkedIn",
     "resume": "Resume",
     "status": "Status",
-    "statusValue": "Looking for job opportunities",
+    "statusValue": "Open to work",
     "location": "Location",
-    "locationValue": "Guadalajara, Jalisco",
-    "workMode": "Work Modality",
-    "workModeValue": "Full Time, Freelance or Temporary"
+    "locationValue": "Guadalajara, Mexico",
+    "workMode": "Work Mode",
+    "workModeValue": "Full Time, Freelance, or Contract"
   }
 }
